@@ -1,12 +1,16 @@
 body{
     margin: auto;
     width: 960px;
+    text-decoration: white;
+    background-color: darkgrey;
 }
 
 .header{
     margin: auto;
     border-style: solid;
-    border-color:cornflowerblue
+    border-color:cornflowerblue;
+    
+    text-decoration: white;
 }
 
 img{
@@ -20,6 +24,8 @@ img{
 .title{
     border-style: solid;
     border-color: darkorange;
+
+    text-decoration: white;
 }
 
 .tabs{
@@ -37,12 +43,16 @@ img{
     height: 630px;
     border-style: solid;
     border-color:blue;
+
+    text-decoration: white;
 }
 
 .vans{
     text-align: center;
     border-style: solid;
     border-color:darksalmon;
+
+    text-decoration: white;
 }
 
 .vans img{

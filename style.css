@@ -1,61 +1,38 @@
 body{
+    background-color: black;
+    width: 1280px;
     margin: auto;
-    width: 960px;
-    text-decoration: white;
-    background-color: darkgrey;
 }
 
-.header{
-    margin: auto;
-    border-style: solid;
-    border-color:cornflowerblue;
-    
-    text-decoration: white;
+div{
+    border: 4px solid;
+    border-color: burlywood;
+    height: 350px;
+    display: flex;
 }
 
-img{
-    width: 21%;
-    height: 21%;
-    float: right;
-    border-style: solid;
-    border-color:darkorange;
+div#top{
+    background-color: #f9844a;
+    display: flex;
+    justify-content: space-around;
 }
+    .topchild{
+        width: 75px;
+        height: 75px;
+    } 
 
-.title{
-    border-style: solid;
-    border-color: darkorange;
-
-    text-decoration: white;
+div#middle{
+    background-color: #43aa8b;
 }
+    .middlechild{
+        width: 100px;
+        height: 100px;
+    }
 
-.tabs{
-    text-align: center;
+div#bottom{
+    background-color: #577590;
 }
-
-.tabs a{
-    margin-left: 30px;
-    margin-right: 30px;
-    border-style: solid;
-    border-color:cadetblue;
-}
-
-.body{
-    height: 630px;
-    border-style: solid;
-    border-color:blue;
-
-    text-decoration: white;
-}
-
-.vans{
-    text-align: center;
-    border-style: solid;
-    border-color:darksalmon;
-
-    text-decoration: white;
-}
-
-.vans img{
-    margin: auto;
-    border-color: greenyellow;
-}
+    .bottomchild{
+        width: 75px;
+        height: 75px;
+    }

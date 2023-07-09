@@ -13,16 +13,34 @@ div{
 
 div#top{
     background-color: #f9844a;
+    height: 130px;
+    margin-bottom: 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
     .topchild{
         width: 75px;
         height: 75px;
     } 
 
+        .topchild-1 img{
+            height: 75px;
+            width: auto;
+        }
+
+        .topchild-1, .topchild-2{
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .topchild-2 img{
+            height: 75px;
+            width: auto;
+        }
+
 div#middle{
     background-color: #43aa8b;
+    margin-bottom: 15px;
 }
     .middlechild{
         width: 100px;

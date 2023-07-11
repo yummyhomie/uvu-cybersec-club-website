@@ -38,12 +38,25 @@ div#top{
             color: white;
         }
 
-div#tbar{
+div#navbar{
+    display: flex;
     background-color: indianred;
     border-radius: 4px 4px;
     margin-bottom: 15px;
-    height: 50px;
+    height: auto;
+    justify-content: space-around;
 }
+    .navbarchild{
+        display: flex;
+        height: 50px;
+    }
+    .navbarchild ul{
+        list-style-type: none;
+    }
+    .navbarchild li{
+        margin: 7px 7px;
+        display: inline;
+    }
 
 
 div#middle{

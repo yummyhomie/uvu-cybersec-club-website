@@ -1,45 +1,54 @@
 body{
     background-color: black;
-    width: 1280px;
+    width: 960px;
     margin: auto;
 }
 
 div{
-    border: 4px solid;
-    border-color: burlywood;
     height: 350px;
     display: flex;
 }
 
 div#top{
-    background-color: #f9844a;
-    height: 130px;
-    margin-bottom: 15px;
     display: flex;
-    justify-content: space-between;
+    background-color: #f9844a;
+    border-radius: 15px 15px 3px 3px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    height: auto;
 }
     .topchild{
-        width: 75px;
-        height: 75px;
+        width: fit-content;
+        height: fit-content;
     } 
-
         .topchild-1 img{
-            height: 75px;
+            margin: 21px 21px 21px 21px;
+            height: 50px;
             width: auto;
         }
 
-        .topchild-1, .topchild-2{
-            width: fit-content;
-            height: fit-content;
+        .topchild-2 p{
+            margin: 21px 21px 21px 21px;
+            height: 50px;
+            width: auto;
+
+            font-family: 'courier new';
+            font-size: 50pt;
+            font-weight: bolder;
+            color: white;
         }
 
-        .topchild-2 img{
-            height: 75px;
-            width: auto;
-        }
+div#tbar{
+    background-color: indianred;
+    border-radius: 4px 4px;
+    margin-bottom: 15px;
+    height: 50px;
+}
+
 
 div#middle{
     background-color: #43aa8b;
+    border-radius: 4px 4px;
     margin-bottom: 15px;
 }
     .middlechild{
@@ -47,8 +56,11 @@ div#middle{
         height: 100px;
     }
 
+
 div#bottom{
     background-color: #577590;
+    border-radius: 5px 5px 15px 15px;
+    margin-bottom: 15px;
 }
     .bottomchild{
         width: 75px;

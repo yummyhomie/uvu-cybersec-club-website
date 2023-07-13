@@ -9,6 +9,8 @@ div{
     display: flex;
 }
 
+/*--------------------- Top ---------------------*/
+
 div#top{
     display: flex;
     background-color: #f9844a;
@@ -26,6 +28,7 @@ div#top{
             width: 482px;
         }
 
+/*---------------- Navigation Bar ----------------*/    
 
 div#navbar{
     display: flex;
@@ -36,6 +39,7 @@ div#navbar{
 }
     .navbarchild{
         background-color: #fb5931;
+        border-radius: 0px 0px 0px 15px;
         width: fit-content;
         height: fit-content;
     }
@@ -48,21 +52,34 @@ div#navbar{
             font-family: arcade_r;
         }
 
+/*-------------------- Middle -------------------*/
 
 div#middle{
-    background-color: #43aa8b;
-    border-radius: 4px 4px;
+    display: flex;
+    background-color: #a3c750;
+    border-radius: 15px 15px 15px 15px;
     margin-bottom: 15px;
+    height: auto;
 }
     .middlechild{
-        width: 100px;
-        height: 100px;
+    position: relative;
     }
+        .middlechild-1{
+         background-color:#d1d347;
+            height: 50px;
+            width: auto;
+            margin: 21px 21px;
+        }
+            .middlechild-2{
+            background-color: #eb7425;
+            margin: 21px 21px;
+        }
 
+/*-------------------- Bottom -------------------*/
 
 div#bottom{
     background-color: #577590;
-    border-radius: 5px 5px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     margin-bottom: 15px;
 }
     .bottomchild{

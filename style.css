@@ -12,8 +12,7 @@ div{
 div#top{
     display: flex;
     background-color: #f9844a;
-    border-radius: 15px 15px 3px 3px;
-    margin-bottom: 15px;
+    border-radius: 15px 15px 0px 0px;
     margin-top: 15px;
     height: auto;
 }
@@ -22,41 +21,32 @@ div#top{
         height: fit-content;
     } 
         .topchild-1 img{
-            margin: 21px 21px 21px 21px;
-            height: 50px;
-            width: auto;
+            margin: 21px 21px 0px 21px;
+            height: auto;
+            width: 482px;
         }
 
-        .topchild-2 p{
-            margin: 21px 21px 21px 21px;
-            height: 50px;
-            width: auto;
-
-            font-family: 'courier new';
-            font-size: 50pt;
-            font-weight: bolder;
-            color: white;
-        }
 
 div#navbar{
     display: flex;
-    background-color: indianred;
-    border-radius: 4px 4px;
+    background-color: #f9844a;
+    border-radius: 0px 0px 15px 15px;
     margin-bottom: 15px;
     height: auto;
-    justify-content: space-around;
 }
     .navbarchild{
-        display: flex;
-        height: 50px;
+        background-color: #fb5931;
+        width: fit-content;
+        height: fit-content;
     }
-    .navbarchild ul{
-        list-style-type: none;
-    }
-    .navbarchild li{
-        margin: 7px 7px;
-        display: inline;
-    }
+        .navbarbuttons{
+            width: auto;
+            height: 50px;
+        }
+        .navbarbuttons a{
+            color: #ffffff;
+            font-family: arcade_r;
+        }
 
 
 div#middle{
@@ -79,3 +69,11 @@ div#bottom{
         width: 75px;
         height: 75px;
     }
+
+@font-face {
+    font-family: AlteHaasGroteskBold;
+    src: url(font-files/altehaasgrotesk/AlteHaasGroteskBold.ttf);
+
+    font-family: arcade_r;
+    src: url(font-files/arcade_ya/ARCADE_R.TTF);
+}

@@ -55,24 +55,30 @@ div#navbar{
 /*-------------------- Middle -------------------*/
 
 div#middle{
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 120px 120px 120px 120px 120px;
+
     background-color: #a3c750;
     border-radius: 15px 15px 15px 15px;
     margin-bottom: 15px;
     height: auto;
 }
     .middlechild{
-    position: relative;
     }
         .middlechild-1{
-         background-color:#d1d347;
-            height: 50px;
-            width: auto;
-            margin: 21px 21px;
+            grid-row: 2 / 3;
+            grid-column: 2 / 5;
+            background-color:#d1d347;
+            border-radius: 15px 15px;
+            height: auto;
         }
-            .middlechild-2{
+        .middlechild-2{
+            grid-row: 3 / 6 ;
+            grid-column: 1 / 6 ;
             background-color: #eb7425;
-            margin: 21px 21px;
+            border-radius: 15px 15px;
+            height: auto;
         }
 
 /*-------------------- Bottom -------------------*/

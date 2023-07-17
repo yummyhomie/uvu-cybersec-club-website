@@ -38,18 +38,24 @@ div#navbar{
     height: auto;
 }
     .navbarchild{
-        background-color: #fb5931;
+        display: flex;
+        background-color: #f9844a;
         border-radius: 0px 0px 0px 15px;
-        width: fit-content;
+        width: 482px;
         height: fit-content;
+        justify-content: center;
     }
         .navbarbuttons{
             width: auto;
             height: 50px;
+            margin: 0px 21px 9px 21px;
         }
         .navbarbuttons a{
             color: #ffffff;
+            text-decoration: none;
+            font-size: 12pt;
             font-family: arcade_r;
+            margin: 9px 7.5px 9px 7.5px;
         }
 
 /*-------------------- Middle -------------------*/
@@ -94,9 +100,26 @@ div#bottom{
     }
 
 @font-face {
+    font-family: madetommyrounded_medium;
+    src: url(font-files/made_tommy_rounded/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+}
+
+@font-face {
     font-family: AlteHaasGroteskBold;
     src: url(font-files/altehaasgrotesk/AlteHaasGroteskBold.ttf);
+}
 
-    font-family: arcade_r;
-    src: url(font-files/arcade_ya/ARCADE_R.TTF);
+@font-face {
+    font-family: ibm;
+    src: url(font-files/ibm/IBM-Logo.ttf);
+}
+
+@font-face {
+font-family: arcade_r;
+src: url(font-files/arcade_ya/ARCADE_R.TTF);
+}
+
+@font-face {
+    font-family: arcade_i;
+    src: url(font-files/arcade_ya/ARCADE_I.TTF);
 }

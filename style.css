@@ -5,7 +5,6 @@ body{
 }
 
 div{
-    background-color:#212529;
     height: 350px;
     display: flex;
 }
@@ -96,6 +95,7 @@ div#middle{
 /*-------------------- Bottom -------------------*/
 
 div#bottom{
+    background-color:#212529;
     border-radius: 15px 15px 15px 15px;
     margin-bottom: 15px;
 }

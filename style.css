@@ -5,6 +5,7 @@ body{
 }
 
 div{
+    background-color:#212529;
     height: 350px;
     display: flex;
 }
@@ -13,7 +14,7 @@ div{
 
 div#top{
     display: flex;
-    background-color: #f9844a;
+    background-color: #212529;
     border-radius: 15px 15px 0px 0px;
     margin-top: 15px;
     height: auto;
@@ -21,6 +22,7 @@ div#top{
     .topchild{
         width: fit-content;
         height: fit-content;
+        border-radius: 15px 0px 0px 0px;
     } 
         .topchild-1 img{
             margin: 21px 21px 0px 21px;
@@ -31,32 +33,28 @@ div#top{
 /*---------------- Navigation Bar ----------------*/    
 
 div#navbar{
-    display: flex;
-    background-color: #f9844a;
+    background-color: #212529;
     border-radius: 0px 0px 15px 15px;
     margin-bottom: 15px;
-    height: auto;
+    height: fit-content;
 }
+
     .navbarchild{
         display: flex;
-        background-color: #f9844a;
-        border-radius: 0px 0px 0px 15px;
-        width: 482px;
         height: fit-content;
-        justify-content: center;
+        width: 482px;
+        margin: 0px 21px 0px 21px;
+
     }
         .navbarbuttons{
-            width: auto;
+            font-family: madetommyrounded_medium;
             height: 50px;
-            margin: 0px 21px 9px 21px;
         }
-        .navbarbuttons a{
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 12pt;
-            font-family: arcade_r;
-            margin: 9px 7.5px 9px 7.5px;
-        }
+            .navbarbuttons a{
+                color: #ffffff;
+                text-decoration: none;
+                margin: 10px 7.5px 0px 7.5px;
+            }
 
 /*-------------------- Middle -------------------*/
 
@@ -64,33 +62,40 @@ div#middle{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20% ;
     grid-template-rows: 120px 120px 120px 120px 120px;
-
-    background-color: #a3c750;
     border-radius: 15px 15px 15px 15px;
     margin-bottom: 15px;
-    height: auto;
+    height: fit-content;
 }
     .middlechild{
     }
         .middlechild-1{
-            grid-row: 2 / 3;
-            grid-column: 2 / 5;
-            background-color:#d1d347;
+            grid-row: 1 / 2;
+            grid-column: 1 / 6;
+            z-index: 3;
             border-radius: 15px 15px;
             height: auto;
+            color: #ffffff;
+            font-family: madetommyrounded_medium;
+            margin: 37px 60px 0px 150px;
+            font-size: 35px;
+            text-align: left;
         }
         .middlechild-2{
             grid-row: 3 / 6 ;
-            grid-column: 1 / 6 ;
-            background-color: #eb7425;
-            border-radius: 15px 15px;
+            grid-column: 2 / 5 ;
+            z-index: 2;
             height: auto;
+            color: #ffffff;
+            font-family: madetommyrounded_medium;
+            margin: 0px auto 0px auto;
+            font-size: 75px;
         }
+
+
 
 /*-------------------- Bottom -------------------*/
 
 div#bottom{
-    background-color: #577590;
     border-radius: 15px 15px 15px 15px;
     margin-bottom: 15px;
 }

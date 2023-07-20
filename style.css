@@ -81,15 +81,25 @@ div#middle{
         }
         .middlechild-2{
             grid-row: 3 / 6 ;
-            grid-column: 2 / 5 ;
+            grid-column: 1 / 4 ;
             z-index: 2;
             height: auto;
             color: #ffffff;
             font-family: madetommyrounded_medium;
-            margin: 0px auto 0px auto;
+            margin: 0px auto 0px 150px;
             font-size: 75px;
         }
 
+        .middlechild-3{
+            grid-row: 4 / 5;
+            grid-column: 3 / 6;
+            width: auto;
+            height: 27px;
+            margin: 20px auto auto 150px ;
+        }
+            .middlechild-3 img{
+                margin: 0px 10px 0px 10px;
+            }
 
 
 /*-------------------- Bottom -------------------*/
@@ -98,6 +108,7 @@ div#bottom{
     background-color:#212529;
     border-radius: 15px 15px 15px 15px;
     margin-bottom: 15px;
+    height: 85px;
 }
     .bottomchild{
         width: 75px;

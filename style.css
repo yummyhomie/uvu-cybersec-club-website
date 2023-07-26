@@ -60,22 +60,19 @@ div#navbar{
 div#middle{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20% ;
-    grid-template-rows: 120px 120px 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px 120px auto;
     border-radius: 15px 15px 15px 15px;
     margin-bottom: 15px;
     height: fit-content;
 }
-    .middlechild{
-    }
         .middlechild-1{
             grid-row: 1 / 2;
             grid-column: 1 / 6;
             z-index: 3;
-            border-radius: 15px 15px;
-            height: auto;
+            height: fit-content;
             color: #ffffff;
             font-family: madetommyrounded_medium;
-            margin: 37px 60px 0px 150px;
+            margin: 39px 70px 0px 125px;
             font-size: 35px;
             text-align: left;
         }
@@ -86,19 +83,31 @@ div#middle{
             height: auto;
             color: #ffffff;
             font-family: madetommyrounded_medium;
-            margin: 0px auto 0px 150px;
+            margin: 0px auto 0px 125px;
             font-size: 75px;
         }
 
         .middlechild-3{
             grid-row: 4 / 5;
-            grid-column: 3 / 6;
+            grid-column: 3 / 5;
             width: auto;
             height: 27px;
-            margin: 20px auto auto 150px ;
+            margin: 20px 20px 20px 200px;
         }
             .middlechild-3 img{
                 margin: 0px 10px 0px 10px;
+            }
+        
+        .middlechild-4{
+            grid-row: 5 / 6;
+            grid-column: 2 / 5;
+            margin: 20px auto 20px auto;
+            height: fit-content;
+        }
+            .middlechild-4 img{
+                border-radius: 7px 7px;
+                height: 300px;
+                width: auto;
             }
 
 
@@ -106,7 +115,7 @@ div#middle{
 
 div#bottom{
     background-color:#212529;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px;
     margin-bottom: 15px;
     height: 85px;
 }

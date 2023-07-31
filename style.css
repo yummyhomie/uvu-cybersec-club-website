@@ -78,24 +78,23 @@ div#middle{
         }
 
         .middlechild-2{
-            grid-row: 3/5;
-            grid-column: 2/4;
+            grid-row: 4 / 5;
+            grid-column: 1 / 6;
             z-index: 1;
-            height: 120px;
-            color: #ffffff;
-            font-family: madetommyrounded_medium;
-            font-size: 75px;
-            margin-top: 9px;
+            height: fit-content;
+            line-height: 60px;
+            margin: 0px auto 0px auto;
         }
+            .middlechild-2 h3{
+                color: #ffffff;
+                font-family: madetommyrounded_medium;
+                font-size: 75px;
+                margin: 0px 0px;
+            }
 
-        .middlechild-3{
-            grid-row: 4/5;
-            grid-column: 4/5;
-            height: 65px;
-            margin: 0px 0px;
-        }
-            .middlechild-3 img{
-                margin: 0px 9px 0px 9px;
+            .middlechild-2 img{
+                height: 60px;
+                margin-left: 15px;
             }
         
         .middlechild-4{

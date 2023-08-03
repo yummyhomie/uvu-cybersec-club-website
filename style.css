@@ -83,7 +83,7 @@ div#middle{
             z-index: 1;
             height: fit-content;
             line-height: 60px;
-            margin: 0px auto 0px auto;
+            margin: 0px auto 37px auto;
         }
             .middlechild-2 h3{
                 color: #ffffff;
@@ -95,6 +95,10 @@ div#middle{
             .middlechild-2 img{
                 height: 60px;
                 margin-left: 15px;
+            }
+
+            .middlechild-2 a{
+                height: 60px;
             }
         
         .middlechild-4{
@@ -112,16 +116,13 @@ div#middle{
 
 /*-------------------- Bottom -------------------*/
 
-div#bottom{
+/*--div#bottom{
     background-color:#212529;
     border-radius: 15px 15px;
     margin-bottom: 15px;
     height: 85px;
-}
-    .bottomchild{
-        width: 75px;
-        height: 75px;
-    }
+}--*/ /*This is formatting for the navigation bar for 
+        whenever we decide to add something to it :) */
 
 @font-face {
     font-family: madetommyrounded_medium;

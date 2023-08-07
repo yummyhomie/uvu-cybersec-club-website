@@ -9,7 +9,9 @@ div{
     display: flex;
 }
 
-/*--------------------- Top ---------------------*/
+/*------------------ Index Start ------------------*/
+
+            /*--- Top ---*/
 
 div#top{
     display: flex;
@@ -29,7 +31,7 @@ div#top{
             width: 482px;
         }
 
-/*---------------- Navigation Bar ----------------*/    
+        /*--- Navigation Bar ---*/    
 
 div#navbar{
     background-color: #212529;
@@ -55,7 +57,7 @@ div#navbar{
                 margin: 10px 7.5px 0px 7.5px;
             }
 
-/*-------------------- Middle -------------------*/
+            /*--- Middle ---*/
 
 div#middle{
     display: grid;
@@ -114,7 +116,7 @@ div#middle{
             }
 
 
-/*-------------------- Bottom -------------------*/
+            /*--- Bottom ---*/
 
 /*--div#bottom{
     background-color:#212529;
@@ -123,6 +125,25 @@ div#middle{
     height: 85px;
 }--*/ /*This is formatting for the navigation bar for 
         whenever we decide to add something to it :) */
+
+/*------------------- Index End -------------------*/
+
+
+
+/*------------------ About Start ------------------*/
+
+/*--All new pages are gonna connect to this "page-about" tag as a 
+temporary placeholder since they're all gonna have a default 
+"under contstruction" message appear. So instead of making a ton of 
+seperate css selectors, I'll just have all of them point here
+temporarily"--*/
+
+.page-about div#uc{
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+/*------------------- About End -------------------*/
 
 @font-face {
     font-family: madetommyrounded_medium;

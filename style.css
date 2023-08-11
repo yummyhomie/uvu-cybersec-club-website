@@ -29,6 +29,7 @@ div#top{
             margin: 21px 21px 0px 21px;
             height: auto;
             width: 482px;
+            vertical-align: top;
         }
 
         /*--- Navigation Bar ---*/    
@@ -138,10 +139,26 @@ temporary placeholder since they're all gonna have a default
 seperate css selectors, I'll just have all of them point here
 temporarily"--*/
 
-.page-about div#uc{
-    grid-template-rows: 100px 100px 100px 100px 100px;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+.pa div#uc{
+    display: grid;
+    grid-template-rows: 100px auto 100px 100px 100px;
+    grid-template-columns: 20% auto 20% 20% 20%;
+    color: blue;
 }
+
+.pa .uc-5{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.pa div#uc h3{
+    grid-row: 2 / 3;
+    grid-column: 3 / 5;
+    margin: auto auto;
+    font-family: ledlight;
+    font-size: 20px;
+}
+
 
 /*------------------- About End -------------------*/
 
@@ -168,4 +185,9 @@ src: url(font-files/arcade_ya/ARCADE_R.TTF);
 @font-face {
     font-family: arcade_i;
     src: url(font-files/arcade_ya/ARCADE_I.TTF);
+}
+
+@font-face {
+    font-family: ledlight;
+    src: url(font-files/ledlight/LEDLIGHT.otf);
 }

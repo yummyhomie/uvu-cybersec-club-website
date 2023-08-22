@@ -14,7 +14,9 @@ div{
             /*--- Top ---*/
 
 div#top{
-    display: flex;
+    display: grid;
+    grid-template-rows: 95px;
+    grid-template-columns: 50% 50%;
     background-color: #212529;
     border-radius: 15px 15px 0px 0px;
     margin-top: 15px;
@@ -31,6 +33,16 @@ div#top{
             width: 482px;
             vertical-align: top;
         }
+    
+    div#timer{
+        font-family: madetommyrounded_medium;
+        color: white;
+        font-size: 30px;
+        justify-self: end;
+        justify-content: end;
+        margin: 13px 21px 21px 0px;
+        text-decoration: none; 
+    }
 
         /*--- Navigation Bar ---*/    
 

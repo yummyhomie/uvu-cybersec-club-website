@@ -22,7 +22,7 @@ function updateTimer() {
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    const timerElement = document.getElementById("timer");
+    const timerElement = document.getElementById("timer-script");
     timerElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
     setTimeout(updateTimer, 1000); // Update every second

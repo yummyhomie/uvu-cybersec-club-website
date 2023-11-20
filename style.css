@@ -4,7 +4,7 @@ body{
     margin: auto;
 }
 
-.index .top-bar{
+.top-bar{
     height: fit-content;
     grid-template-columns: auto auto 25% 25%;
     grid-template-rows: auto auto;
@@ -29,6 +29,23 @@ body{
         grid-row: 1 / 2;         
     }
 
+    .top-buttons{
+        justify-self: right;
+        height: fit-content;
+        margin: 220px 0px 0px 0px;
+
+        grid-column: 2 / 5;
+        grid-row: 1 / 2;
+    }
+
+        .top-buttons a{
+            text-decoration: none;
+            color: white;
+            font-family: arcade_r;
+            font-size: 13pt;
+            padding-left: 34px;
+        }
+
 hr.line{
     border: none;
     height: 4px;
@@ -38,13 +55,17 @@ hr.line{
     opacity: 0.05;
 }
 
+/*|- - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - INDEX PAGE - - - - - -|*/
+/*|- - - - - - - - - - - - - - - - - |*/
+
 .index .midL-section{
     height: fit-content;
     grid-template-columns: 10% auto 10%;
     grid-template-rows: auto auto;
 }
 
-    .midL-section p{
+    .index .midL-section p{
         text-decoration: none;
         color: #ff3300;
         font-size: 30pt;
@@ -53,31 +74,61 @@ hr.line{
         height: fit-content;
         width: fit-content;
 
-        margin: 145px 0px 145px 20px;
+        margin: 110px 0px 145px 20px;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         z-index: 5;
     }
 
-        /*.top-buttons{
-            grid-column: 3 / 5;
-            grid-row: 1 / 2;
-            justify-self: right;    
+/*|- - - - - - - - - - - - - - - - - - -|*/
+/*|- - - - - - MEMBERS PAGE - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - - -|*/
+
+.members .midL-section{
+    width: 1090px;
+    margin: auto;
+    position: absolute;             /* Ill be honest with you I have no idea how */
+    left: 50%;                      /* these lines work but they center the midL */ 
+    transform: translateX(-50%);    /* section to the page w/out breaking it :)  */
+    height: fit-content;
+
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 220px;
+    }
+
+    .members .contact-box{
+        display: grid;
+        border-radius: 7px;
+        background-color: antiquewhite;
+        grid-template-columns: auto auto;
+    }
+
+        .midL-section .contact-box img{
+            width: 110px;
+            height: 110px;
+            border-radius: 15%;
+            padding: 9px;
+
+            background-color: azure;
         }
 
-        .top-buttons a{
+        .midL-section .contact-box p{
+            width: fit-content;
+            height: fit-content;
             text-decoration: none;
             color: white;
-            font-family: arcade_r;
-            font-size: 9pt;
+            font-family: madetommyrounded_medium;
+            font-size: 13pt;
+            
+            margin: 9px 9px 100px 100px;
+            background-color: bisque;
 
-            background-color: #212529;
-            border-radius: 9px 9px;
-            height: fit-content;
-            padding: 2px 4px 3px 4px;
+        }
 
-            margin: 200px 0px 0px 15px;
-        }*/
+
+/*|- - - - - - - - - - - - - - - - - -|*/
+/*|- - - - - - FONTS USED - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - -|*/
 
 @font-face {
     font-family: arcade_r;

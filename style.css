@@ -85,7 +85,7 @@ hr.line{
 /*|- - - - - - - - - - - - - - - - - - -|*/
 
 .members .midL-section{
-    width: 1090px;
+    width: 1400px;
     margin: auto;
     position: absolute;             /* Ill be honest with you I have no idea how */
     left: 50%;                      /* these lines work but they center the midL */ 
@@ -93,36 +93,31 @@ hr.line{
     height: fit-content;
 
     grid-template-columns: auto auto auto;
-    grid-template-rows: 220px;
+    /*grid-template-rows: 220px;*/
+    grid-template-rows: auto;
     }
 
     .members .contact-box{
         display: grid;
         border-radius: 7px;
-        background-color: antiquewhite;
-        grid-template-columns: auto auto;
+        grid-template-columns: 198px auto; /* The 198px is the width of the image + 9px padding on both ends */
     }
 
-        .midL-section .contact-box img{
-            width: 110px;
-            height: 110px;
-            border-radius: 15%;
-            padding: 9px;
-
-            background-color: azure;
+        .members .contact-box img{
+            grid-column: 1 / 2;
+            width: 180px;
+            height: 220px; 
+            padding: 9px 9px;
+            border-radius: 7%;
         }
 
-        .midL-section .contact-box p{
-            width: fit-content;
-            height: fit-content;
+        .members .contact-box p{
             text-decoration: none;
             color: white;
+            font-size: 15pt;
             font-family: madetommyrounded_medium;
-            font-size: 13pt;
-            
-            margin: 9px 9px 100px 100px;
-            background-color: bisque;
-
+            height: fit-content;
+            width: fit-content;
         }
 
 

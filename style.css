@@ -85,22 +85,59 @@ hr.line{
 /*|- - - - - - - - - - - - - - - - - - -|*/
 
 .members .midL-section{
-    width: 1400px;
+    width: 1500px;
     margin: auto;
     position: absolute;             /* Ill be honest with you I have no idea how */
     left: 50%;                      /* these lines work but they center the midL */ 
     transform: translateX(-50%);    /* section to the page w/out breaking it :)  */
     height: fit-content;
 
-    grid-template-columns: auto auto auto;
-    /*grid-template-rows: 220px;*/
-    grid-template-rows: auto;
+    grid-template-columns: 500px 500px 500px;
+    grid-template-rows: 50px 100px 100px;
+    gap: 15px;
     }
 
     .members .contact-box{
+        padding: 9px;
+
+        grid-template-columns: 180px auto; /* this equals 500px */
+        grid-row: 1 / 4;
+
+        font-family: madetommyrounded_medium;
+        color: white;
+    }
+
+        .members .contact-box img{
+            width: 180px;
+            height: 180px;
+            border-radius: 9%;
+        }
+
+        .members .contact-box h2{
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            text-align: right;
+            font-size: 30pt;
+            margin-top: 29px;
+        }
+
+        .members .contact-box p{
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            text-align: right;
+            margin: 0px 0px;
+            font-size: 15pt;
+            color: #ff3300;
+        }
+
+
+
+
+
+    /*.members .contact-box{
         display: grid;
         border-radius: 7px;
-        grid-template-columns: 198px auto; /* The 198px is the width of the image + 9px padding on both ends */
+        grid-template-columns: 198px auto; The 198px is the width of the image + 9px padding on both ends 
     }
 
         .members .contact-box img{
@@ -111,6 +148,19 @@ hr.line{
             border-radius: 7%;
         }
 
+        .members .contact-box h2{
+            text-decoration: none;
+            color: white;
+            font-size: 20pt;
+            font-family: madetommyrounded_medium;
+            height: fit-content;
+            width: fit-content;
+            margin-top: 50px;
+
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
         .members .contact-box p{
             text-decoration: none;
             color: white;
@@ -118,8 +168,10 @@ hr.line{
             font-family: madetommyrounded_medium;
             height: fit-content;
             width: fit-content;
-        }
 
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        } */
 
 /*|- - - - - - - - - - - - - - - - - -|*/
 /*|- - - - - - FONTS USED - - - - - - |*/

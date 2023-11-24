@@ -84,27 +84,38 @@ hr.line{
 /*|- - - - - - MEMBERS PAGE - - - - - - |*/
 /*|- - - - - - - - - - - - - - - - - - -|*/
 
-.members .midL-section{
+.members .midL-section-title{
+    font-family: madetommyrounded_medium;
+    color: white;
+    font-size: 35pt;
+
+    height: 63px;
     width: 1500px;
-    margin: auto;
-    position: absolute;             /* Ill be honest with you I have no idea how */
+    position: relative;             /* Ill be honest with you I have no idea how */
     left: 50%;                      /* these lines work but they center the midL */ 
     transform: translateX(-50%);    /* section to the page w/out breaking it :)  */
-    height: fit-content;
 
-    grid-template-columns: 500px 500px 500px;
-    grid-template-rows: 50px 100px 100px;
-    gap: 15px;
+    }
+
+.members .midL-section{
+    width: 1500px;
+    margin: 15px 0px;
+    position: relative;             /* Ill be honest with you I have no idea how */
+    left: 50%;                      /* these lines work but they center the midL */ 
+    transform: translateX(-50%);    /* section to the page w/out breaking it :)  */
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr); /* "repeat(1, 1fr)" creates 1 row each taking up an equal fraction of the container's height*/
+    gap: 15px;                                      /* "repeat(3, 1fr)" creates 3 columns each taking up an equal fraction of the container's width*/
     }
 
     .members .contact-box{
-        padding: 9px;
-
-        grid-template-columns: 180px auto; /* this equals 500px */
-        grid-row: 1 / 4;
-
         font-family: madetommyrounded_medium;
         color: white;
+        background-color: rgb(245, 245, 245, 0.06);
+
+        padding: 15px;
+        border-radius: 10px;
+        grid-column: span 1; /* "grid-column: span 1" and "grid-row: span 1" mean that the box should span 1 column and 1 row.*/
+        grid-row: span 1;
     }
 
         .members .contact-box img{
@@ -114,64 +125,23 @@ hr.line{
         }
 
         .members .contact-box h2{
-            grid-row: 1 / 2;
-            grid-column: 2 / 3;
             text-align: right;
             font-size: 30pt;
+
             margin-top: 29px;
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
         }
 
         .members .contact-box p{
-            grid-row: 1 / 2;
-            grid-column: 2 / 3;
-            text-align: right;
-            margin: 0px 0px;
             font-size: 15pt;
             color: #ff3300;
-        }
+            text-align: right;
 
-
-
-
-
-    /*.members .contact-box{
-        display: grid;
-        border-radius: 7px;
-        grid-template-columns: 198px auto; The 198px is the width of the image + 9px padding on both ends 
-    }
-
-        .members .contact-box img{
-            grid-column: 1 / 2;
-            width: 180px;
-            height: 220px; 
-            padding: 9px 9px;
-            border-radius: 7%;
-        }
-
-        .members .contact-box h2{
-            text-decoration: none;
-            color: white;
-            font-size: 20pt;
-            font-family: madetommyrounded_medium;
-            height: fit-content;
-            width: fit-content;
-            margin-top: 50px;
-
-            grid-column: 2 / 3;
+            margin: 0px 0px;
             grid-row: 1 / 2;
-        }
-
-        .members .contact-box p{
-            text-decoration: none;
-            color: white;
-            font-size: 15pt;
-            font-family: madetommyrounded_medium;
-            height: fit-content;
-            width: fit-content;
-
             grid-column: 2 / 3;
-            grid-row: 1 / 2;
-        } */
+        }
 
 /*|- - - - - - - - - - - - - - - - - -|*/
 /*|- - - - - - FONTS USED - - - - - - |*/

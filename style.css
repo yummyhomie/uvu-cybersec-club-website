@@ -143,6 +143,40 @@ hr.line{
             grid-column: 2 / 3;
         }
 
+/*|- - - - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - MEETINGS PAGE - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - - - |*/
+
+.meetings .midL-section{
+    width: 1500px;
+    margin: 15px 0px;
+    position: relative;           
+    left: 50%;                     
+    transform: translateX(-50%);   
+    grid-template: repeat(1, 1fr) / repeat(5, 1fr); /* "repeat(1, 1fr)" creates 1 row each taking up an equal fraction of the container's height*/
+    gap: 15px;                                      /* "repeat(4, 1fr)" creates 4 columns each taking up an equal fraction of the container's width*/
+    }
+
+        .meetings .meetings-box{
+            background-color: rgb(245, 245, 245, 0.06);
+            padding: 15px;
+            border-radius: 10px;
+
+            grid-column: span 1; /* "grid-column: span 1" and "grid-row: span 1" mean that the box should span 1 column and 1 row.*/
+            grid-row: span 1;
+        }
+
+/*|- - - - - - UNDER CONTRUCTION - - - - - - |*/
+.under-construction{
+    margin: auto;
+}
+
+.under-construction img{
+    margin: 90px auto 0px auto;
+    width: 200px;
+    height: auto;
+}
+
 /*|- - - - - - - - - - - - - - - - - -|*/
 /*|- - - - - - FONTS USED - - - - - - |*/
 /*|- - - - - - - - - - - - - - - - - -|*/

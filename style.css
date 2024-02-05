@@ -60,14 +60,12 @@ hr.line{
 /*|- - - - - - - - - - - - - - - - - |*/
 
 .index .midL-section{
-    background-color: red;
     height: fit-content;
     grid-template-columns: 10% auto 10%;
     grid-template-rows: auto;
 }
 
     .index .midL-section p{
-        background-color: yellow;
         text-decoration: none;
         color: #ff3300;
         font-size: 30pt;
@@ -76,27 +74,86 @@ hr.line{
         height: fit-content;
         width: fit-content;
 
-        margin: 110px 0px 145px 20px;
+        margin: 110px 0px 135px 20px;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
-        z-index: 5;
     }
 
 .index .midL-section-links{
-    background-color: red;
     height: fit-content;  
     justify-content: center;    /*| This centers the content to the middle o' the page |*/
 }
 
     .index .midL-section-links a{
-        background-color: yellow;
         text-decoration: none;
         color: #ff3300;
-        font-size: 30pt;
+        font-size: 25pt;
         font-family: madetommyrounded_medium;
         height: fit-content;
         width: fit-content;
+
+        margin: 0px 10px 0px 10px;
     }
+
+.index .midL-section-title{
+    font-family: madetommyrounded_medium;
+    color: white;
+    font-size: 35pt;
+
+    height: 63px;
+    width: 1500px;
+    position: relative;             /* Ill be honest with you I have no idea how */
+    left: 50%;                      /* these lines work but they center the midL */ 
+    transform: translateX(-50%);    /* section to the page w/out breaking it :)  */
+
+    }
+
+.index .midL-section-blog{
+    width: 1500px;
+    margin: 15px 0px;
+    position: relative;             /* Ill be honest with you I have no idea how */
+    left: 50%;                      /* these lines work but they center the midL */ 
+    transform: translateX(-50%);    /* section to the page w/out breaking it :)  */
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr); /* "repeat(1, 1fr)" creates 1 row each taking up an equal fraction of the container's height*/
+    gap: 15px;                                      /* "repeat(3, 1fr)" creates 3 columns each taking up an equal fraction of the container's width*/
+    }
+
+    .index .box{
+        font-family: madetommyrounded_medium;
+        color: white;
+        background-color: rgb(245, 245, 245, 0.06);
+
+        padding: 15px;
+        border-radius: 10px;
+        grid-column: span 1; /* "grid-column: span 1" and "grid-row: span 1" mean that the box should span 1 column and 1 row.*/
+        grid-row: span 1;
+    }
+
+        .index .box img{
+            width: 180px;
+            height: 180px;
+            border-radius: 9%;
+        }
+
+        .index .box h2{
+            text-align: right;
+            font-size: 30pt;
+
+            margin-top: 29px;
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+        }
+
+        .index .box p{
+            font-size: 15pt;
+            color: #ff3300;
+            text-align: right;
+
+            margin: 0px 0px;
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+        }
+
 
 /*|- - - - - - - - - - - - - - - - - - -|*/
 /*|- - - - - - MEMBERS PAGE - - - - - - |*/

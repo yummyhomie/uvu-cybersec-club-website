@@ -152,6 +152,7 @@ hr.line{
 
         .index .box img{
             background-color: red;
+            max-height: 350px;
             width: 100%;
             border-radius: 2%;
 

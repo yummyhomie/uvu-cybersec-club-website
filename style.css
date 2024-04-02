@@ -46,24 +46,20 @@ body{
             padding-left: 34px;
         }
 
+hr.line{
+    border: none;
+    height: 4px;
+    width: 900px;
+    background-color: white;
+    border-radius: 6px 6px;
+    opacity: 0.05;
 
+    margin: 110px auto 110px auto;    /*| This puts a gap on top & under the line dividers (110px). |*/
+}                                     /*| "auto" centers it on the left & right sides |*/
 
-        hr.line{
-            border: none;
-            height: 4px;
-            width: auto;
-            background-color: white;
-            border-radius: 6px 6px;
-            opacity: 0.05;
-        
-            margin: 1px auto 25px auto;    /*| This puts a gap on top & under the line dividers (110px). |*/
-                                            /*| "auto" centers it on the left & right sides |*/
-        }                               
-        
-
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - INDEX PAGE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - INDEX PAGE - - - - - -|*/
+/*|- - - - - - - - - - - - - - - - - |*/
 
 .index .midL-section{
     height: fit-content;
@@ -111,9 +107,9 @@ body{
         width: fit-content;
     }
 
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - MEMBERS PAGE - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  |*/
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - - -|*/
+/*|- - - - - - MEMBERS PAGE - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - - -|*/
 
 .members .midL-section-title{
     font-family: madetommyrounded_medium;
@@ -174,9 +170,9 @@ body{
             grid-column: 2 / 3;
         }
 
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - MEETINGS PAGE - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  |*/
+/*|- - - - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - MEETINGS PAGE - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - - - |*/
 
 .meetings .midL-section{
     width: 1500px;
@@ -188,20 +184,14 @@ body{
     gap: 15px;                                      /* "repeat(4, 1fr)" creates 4 columns each taking up an equal fraction of the container's width*/
     }
 
-    .meetings .meetings-box{
-        background-color: rgb(245, 245, 245, 0.06);
-            font-size: 11pt;
-            color: #ff3300;
-            text-align: left;
+        .meetings .meetings-box{
+            background-color: rgb(245, 245, 245, 0.06);
+            padding: 15px;
+            border-radius: 10px;
 
-        padding: 15px;
-        border-radius: 10px;
-        height: 100px;
-        overflow: hidden;           /* Hides text that goes over the div (No overflowing to keep it clean) */
-
-        grid-column: span 1; /* "grid-column: span 1" and "grid-row: span 1" mean that the box should span 1 column and 1 row.*/
-        grid-row: span 1;
-    }
+            grid-column: span 1; /* "grid-column: span 1" and "grid-row: span 1" mean that the box should span 1 column and 1 row.*/
+            grid-row: span 1;
+        }
 
 /*|- - - - - - UNDER CONTRUCTION MESSAGE - - - - - - |*/
 .under-construction{

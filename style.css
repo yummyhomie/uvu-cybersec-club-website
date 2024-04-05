@@ -50,18 +50,18 @@ body{
         hr.line{
             border: none;
             height: 4px;
-            width: auto;
+            width: 900px;
             background-color: white;
             border-radius: 6px 6px;
             opacity: 0.05;
         
-            margin: 1px auto 25px auto;    /*| This puts a gap on top & under the line dividers (110px). |*/
-        }                                   /*| "auto" centers it on the left & right sides |*/
+            margin: 110px auto 110px auto;    /*| This puts a gap on top & under the line dividers (110px). |*/
+        }                                     /*| "auto" centers it on the left & right sides |*/
 
 
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - INDEX PAGE - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - INDEX PAGE - - - - - -|*/
+/*|- - - - - - - - - - - - - - - - - |*/
 
 .index .midL-section{
     height: fit-content;
@@ -109,9 +109,9 @@ body{
         width: fit-content;
     }
 
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - MEMBERS PAGE - - - - - - - - - - - - - - - - - - - - -  |*/
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - MEMBERS PAGE - - - - - -|*/
+/*|- - - - - - - - - - - - - - - - - - |*/
 
 .members .midL-section-title{
     font-family: madetommyrounded_medium;
@@ -172,9 +172,9 @@ body{
             grid-column: 2 / 3;
         }
 
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |*/
-/*|- - - - - - MEETINGS PAGE - - - - - - - - - - - - - - - - - - - - - - -  |*/
-/*|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  |*/
+/*|- - - - - - - - - - - - - - - - - - -|*/
+/*|- - - - - - MEETINGS PAGE - - - - - -|*/
+/*|- - - - - - - - - - - - - - - - - - -|*/
 
 .meetings .midL-section{
     width: 1500px;
@@ -203,7 +203,7 @@ body{
 
 
 
-/*|- - - - - - UNDER CONTRUCTION MESSAGE - - - - - - - - - - - - - - - - - |*/
+/*|- - - - - - UNDER CONTRUCTION MESSAGE - - - - - -|*/
 .under-construction{
     margin: auto;
 }

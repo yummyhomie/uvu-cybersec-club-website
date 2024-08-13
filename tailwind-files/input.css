@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: arcade;
+        src: url("../project-files/font-files/arcade_r.TTF");
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: tommy;
+        src: url("../project-files/font-files/madetommyrounded_medium.otf");
+    }
+}

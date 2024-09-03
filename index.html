@@ -2,48 +2,47 @@
 <head>
     <title>Cybersecurity Club at UVU</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./tailwind-files/output.css"> <!-- Links Tailwind CSS Sheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="icon" type="image/x-icon" href="../images/cscuvu-logo-favi.png">
     <!--| This link connects a database of icons for us to call |-->
 </head>
-<body class="index">
+<body class="bg-black w-[960px] mx-auto text-white">
 
-    <div class="top-bar" style="display: grid;">
-        <img src="images/cscuvu-logo-no-logo.png" alt="CSCUVU Club Logo">
-        <p>Cybersecurity Club at UVU</p>
-
-        <div class="top-buttons" style="display: flex;">
-            <a href="pages/about.html">About</a>
-            <a href="pages/meetings.html">Meetings</a>
-            <a href="pages/members.html">Members</a>
-            <a href="pages/contact.html">Contact</a>
+    <div id="TOP" class="grid grid-cols-3 gap-2">
+        <div class="h-auto flex items-center justify-center font-bold text-4xl rounded-lg row-span-2">
+            <a href="./index.html">
+                <img src="./project-files/image-files/cscuvu-logo.png" alt="CSCUVU Club Logo">
+            </a>
         </div>
+        
+        <div class="h-auto flex items-center justify-center font-bold rounded-lg col-span-2 mt-auto">
+            <h1 class="font-arcade text-5xl text-right pr-1">Cybersecurity Club at UVU</h1>
+        </div> 
 
+        <div class="h-fit flex justify-end gap-9 text-lg rounded-lg col-span-2 font-arcade mb-auto">
+            <a href="./project-files/about.html">About</a>
+            <a href="./project-files/meetings.html">Meetings</a>
+            <a href="./project-files/members.html">Members</a>
+            <a class="pr-[7.5px]" href="./project-files/contact.html">Contact</a>
+        </div>       
     </div>
 
-    <hr class="line" style="margin: 0px 0px 110px 0px;"></hr>   <!-- This removes the default top margin of 110px -->
-                                                                <!-- See style.css, line 57-58 for more information -->    
-    <div class="announcements"></div>
+    <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mb-32 rounded-full opacity-25"></hr>
 
-    <div class="midL-section" style="display: grid;">
+    <div class="font-tommy text-5xl justify-center w-[90%] mx-auto">
         <p>CSCUVU is a student run organization here at Utah Valley University.
-            We practice info-sec, privacy, and hacking your moms car. (respectfully)</p>      
+           We practice info-sec, privacy, and hacking your moms car. (respectfully)</p>      
     </div>
 
-    <div class="midL-section-links" style="display: flex;">
+    <div class="font-tommy text-4xl flex justify-center gap-9 w-[90%] mx-auto mt-16">
         <a href="https://discord.gg/q22Ju47"><i class="fab fa-discord"></i> discord</a>
         <a href="https://github.com/tech-clubs-uvu"><i class="fab fa-github"></i> github</a>            <!-- Do not remove these links! Please :) -->
         <a href="https://www.linkedin.com/company/cscuvu"><i class="fab fa-linkedin"></i> linkedin</a> 
     </div>
 
-    <hr class="line"></hr>
+    <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mt-32 rounded-full opacity-25"></hr>
 
-    <!--<div class="midL-section-blog" style="display: grid;">
-        <p>This is a Test. It's good to see you again.</p>
-    </div>
-
-    <hr class="line" style="margin-bottom: 110px;"></hr>
---> <!-- Placeholder for future blog section -->
 </body>
 </html>
 

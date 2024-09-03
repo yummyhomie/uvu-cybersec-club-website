@@ -1,0 +1,20 @@
+https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.4
+
+./tailwindcss-linux-x64 init (made config file)
+
+  content: ["../index.html"],
+
+Input this in CSS file
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+Then I linked the stylesheet onto the html sheet. Making sure to link output.css and not input.css
+
+Then I ran either of these commands. 
+./tailwindcss -i input.css -o output.css --watch
+./tailwindcss -i input.css -o output.css --minify\
+
+Windows directions
+Open terminal and navigate to program directory
+tailwindcss-windows-x64.exe --input input.css --output output.css --watch

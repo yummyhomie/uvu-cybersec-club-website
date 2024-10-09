@@ -30,62 +30,111 @@
     
     <p class="font-arcade text-5xl text-center pb-16 text-[#005ee6]">Upcoming Meetings</p>
 
-    <div id="UPCOMING-MEETINGS" class="grid grid-cols-2 gap-[15px] mt-5">
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[auto,fit,fit] p-3 pt-2 gap-1">
-            <div id="DATE & TIME" class="text-right text-[#23d18b] font-tommy text-2xl">Nov-19-24</div>
-            <div id="EVENT TITLE" class="text-right font-tommy text-3xl mb-[6px]">Meeting with 3M Healthcare</div>
-            <div id="EVENT IMAGE" class="h-fit overflow-hidden">
-                <img class="w-full h-full object-hidden rounded-md" src="./image-files/event-images/11-19-24.png">
-            </div>
-        </div>
-        <div id="MEETING DESCRIPTION" class="p-3 pt-6 font-tommy text-2xl text-right">
-            <p>We will be meeting with the Security Director of 3M Healthcare! More information to follow.</p>
-        </div>
-
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[auto,fit,fit] p-3 pt-2 gap-1">
-            <div id="DATE & TIME" class="text-right text-[#23d18b] font-tommy text-2xl">To Be Decided!</div>
-            <div id="EVENT TITLE" class="text-right font-tommy text-3xl mb-[6px]">Meeting with Arctic Wolf</div>
-            <div id="EVENT IMAGE" class="h-fit overflow-hidden">
-                <img class="w-full h-full object-hidden rounded-md" src="./image-files/event-images/9-17-24.png">
-            </div>
-        </div>
-        <div id="MEETING DESCRIPTION" class="p-3 pt-6 font-tommy text-2xl text-right">
-            <p>Arctic Wolf will be bringing experts from the Cybersecurity industry to come 
-               speak to us! Bring lots of questions.</p>
-        </div>
-    </div>
+    <div id="upcoming-meetings"></div>
 
     <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mt-32 mb-32 rounded-full opacity-25"></hr>
 
     <p class="font-arcade text-5xl text-center pb-16 text-[#005ee6]">Past Meetings</p>
 
-    <div id="UPCOMING-MEETINGS" class="grid grid-cols-2 gap-[15px] mt-5">
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[auto,fit,fit] p-3 pt-2 gap-1">
-            <div id="DATE & TIME" class="text-right text-[#23d18b] font-tommy text-2xl">Sep-03-24</div>
-            <div id="EVENT TITLE" class="text-right font-tommy text-3xl mb-[6px]">Meeting with the NSA</div>
-            <div id="EVENT IMAGE" class="h-fit overflow-hidden">
-                <img class="w-full h-full object-hidden rounded-md" src="./image-files/event-images/9-03-24.png">
-            </div>
-        </div>
-        <div id="MEETING DESCRIPTION" class="p-3 pt-6 font-tommy text-2xl text-right">
-            <p>We'll hear from Cybersecurity/InfoSec industry experts from the NSA come talk to us about 
-               anything & how to work for the NSA. Possible Q&A at the end. Invite everyone you know!</p>
-        </div>
-    </div>
+    <div id="past-meetings"></div>
     
-    <div id="PAST-MEETINGS" class="grid grid-cols-2 gap-[15px] mt-5">
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[auto,fit,fit] p-3 pt-2 gap-1">
-            <div id="DATE & TIME" class="text-right text-[#23d18b] font-tommy text-2xl">Aug-23-24</div>
-            <div id="EVENT TITLE" class="text-right font-tommy text-3xl mb-[6px]">First Club Meeting of Fall 2024</div>
-            <div id="EVENT IMAGE" class="h-fit overflow-hidden">
-                <img class="w-full h-full object-hidden rounded-md" src="./image-files/event-images/8-27-24.png">
+    <script>
+    // Function to generate the upcoming event blocks/elements that will appear in the above code
+    function generateUpcomingEventBlocks(jsonData) {
+        const eventContainer = document.querySelector('#upcoming-meetings');
+        
+        jsonData.forEach(event => {
+            const eventBlock = document.createElement('div');
+            eventBlock.className = 'grid grid-cols-2 gap-[15px] mt-6';
+
+            eventBlock.innerHTML = `
+            <div id="LEFT-SIDE" class="col-start-1 col-end-2 bg-csc-gray bg-opacity-[0.06] rounded-lg p-3">
+
+                <div id="date" class="text-right text-[#23d18b] font-tommy text-2xl">
+                    ${event.date}
+                </div>
+
+                <div id="title" class="text-right font-tommy text-3xl mb-[6px]">
+                    ${event.title}
+                </div>
+
+                <div id="image">
+                    <img class="w-full h-full object-hidden rounded-md" src="${event.image}">
+                </div>
+
             </div>
-        </div>
-        <div id="MEETING DESCRIPTION" class="p-3 pt-6 font-tommy text-2xl text-right">
-            <p>The first inaugural meeting for the Cybersecurity Club at UVU. We'll introduce the club, 
-               meet everyone, and vote for new leadership. Anyone is welcome to run for leadership!</p>
-        </div>
-    </div>
+
+            <div id="RIGHT-SIDE" class="col-start-2 col-end-3 rounded-lg p-3">
+
+                <div id="description" class="font-tommy text-2xl text-right">
+                    ${event.description}
+                </div>
+            </div>
+            `;
+            
+            eventContainer.appendChild(eventBlock);
+        });
+    }
+
+    fetch('../events.json')
+    .then(response => response.json())
+    .then(data => {
+        // Generate blocks for upcoming events
+        generateUpcomingEventBlocks(data.upcoming_events);
+    })
+    .catch(error => console.error('Error fetching JSON:', error)); 
+
+    </script>
+
+    <script>
+    // Function to generate the past event blocks/elements that will appear in the above code
+    function generatePastEventBlocks(jsonData) {
+        const eventContainer = document.querySelector('#past-meetings');
+        
+        jsonData.forEach(event => {
+            const eventBlock = document.createElement('div');
+            eventBlock.className = 'grid grid-cols-2 gap-[15px] mt-6';
+
+            eventBlock.innerHTML = `
+            <div id="LEFT-SIDE" class="col-start-1 col-end-2 bg-csc-gray bg-opacity-[0.06] rounded-lg p-3">
+
+                <div id="date" class="text-right text-[#23d18b] font-tommy text-2xl">
+                    ${event.date}
+                </div>
+
+                <div id="title" class="text-right font-tommy text-3xl mb-[6px]">
+                    ${event.title}
+                </div>
+
+                <div id="image">
+                    <img class="w-full h-full object-hidden rounded-md" src="${event.image}">
+                </div>
+
+            </div>
+
+            <div id="RIGHT-SIDE" class="col-start-2 col-end-3 rounded-lg p-3">
+
+                <div id="description" class="font-tommy text-2xl text-right">
+                    ${event.description}
+                </div>
+            </div>
+            `;
+            
+            eventContainer.appendChild(eventBlock);
+        });
+    }
+
+    fetch('../events.json')
+    .then(response => response.json())
+    .then(data => {
+        // Generate blocks for past events
+        generatePastEventBlocks(data.past_events);
+    })
+    .catch(error => console.error('Error fetching JSON:', error)); 
+
+    </script>
+
+    <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mt-32 mb-32 rounded-full opacity-25"></hr>
 
 </body>
-</html>
+</html>                   

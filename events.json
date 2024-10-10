@@ -4,25 +4,29 @@
         "date": "Wed, Oct 16",
         "title": "Hivestorm Competition",
         "image": "/project-files/image-files/event-images/10-16-24.png",
-        "description": "Our team sets out to compete for 1st place in this upcoming Hivestorm competition. More details to follow!"
+        "description": "Our team sets out to compete for 1st place in this upcoming Hivestorm competition. Competition details below.",
+        "info": "https://www.hivestorm.org/"
     },
       {
         "date": "Sat, Oct 26",
         "title": "UB Lockdown Competition",
         "image": "/project-files/image-files/event-images/10-26-24.png",
-        "description": "Our team will compete in this upcoming Lockdown Competition, hosted by University at Buffalo. GO WOLVERINES!"
+        "description": "Our team will compete in this upcoming Lockdown Competition, hosted by University at Buffalo. GO WOLVERINES!",
+        "info": "https://lockdown.ubnetdef.org/"   
       },
       {
         "date": "Tue, Nov 19",
         "title": "Meeting with 3M Healthcare",
         "image": "/project-files/image-files/event-images/11-19-24.png",
-        "description": "We will be meeting with the Security Director of 3M Healthcare! More information to follow!"
+        "description": "We will be meeting with the Security Director of 3M Healthcare! More information to follow!",
+        "info": ""
       },
       {
         "date": "Sat, Feb 01 2025",
         "title": "RMCCDC Qualifiers",
         "image": "/project-files/image-files/event-images/2-1-25.png",
-        "description": "Our team will be competiting in National Collegiate Cyber Defense Competition Qualifiers. Send good vibes!"
+        "description": "Our team will be competiting in National Collegiate Cyber Defense Competition Qualifiers. Send good vibes!",
+        "info": "https://www.nationalccdc.org/"
       }
     ],
 
@@ -31,13 +35,15 @@
         "date": "Tue, Sep 03",
         "title": "Meeting with the NSA",
         "image": "/project-files/image-files/event-images/9-03-24.png",
-        "description": "We'll hear from Cybersecurity/InfoSec industry experts from the NSA come talk to us about anything & how to work for the NSA. Possible Q&A at the end. Invite everyone you know!"
+        "description": "We'll hear from Cybersecurity/InfoSec industry experts from the NSA come talk to us about anything & how to work for the NSA. Possible Q&A at the end. Invite everyone you know!",
+        "info": ""
       },
       {
         "date": "Tue, Aug 27",
         "title": "First Club Meeting of Fall 2024",
         "image": "/project-files/image-files/event-images/8-27-24.png",
-        "description": "The first inaugural meeting for the Cybersecurity Club at UVU. We'll introduce the club, meet everyone, and vote for new leadership. Anyone is welcome to run for leadership!"
+        "description": "The first inaugural meeting for the Cybersecurity Club at UVU. We'll introduce the club, meet everyone, and vote for new leadership. Anyone is welcome to run for leadership!",
+        "info": ""
       }
     ]
   }

@@ -1,18 +1,11 @@
 {
     "upcoming_events": [
       {
-        "date": "Sat, Oct 26",
-        "title": "UB Lockdown Competition",
-        "image": "/project-files/image-files/event-images/10-26-24.png",
-        "description": "Our team will compete in this upcoming Lockdown Competition, hosted by University at Buffalo. GO WOLVERINES!",
-        "info": "https://lockdown.ubnetdef.org/"   
-      },
-      {
-        "date": "Wed, Oct 26",
-        "title": "WRCCDC Invitational",
-        "image": "/project-files/image-files/event-images/10-26-24-2.png",
-        "description": "Our team will be competing in the first WRCCDC Invitational of the competition year! Competition details below!",
-        "info": "https://wrccdc.org/"
+        "date": "Tue, Oct 29",
+        "title": "Competition Debrief",
+        "image": "/project-files/image-files/event-images/10-29-24.png",
+        "description": "We'll be having a quick debrief from the competing members of Lockdown & CCDC. Bring questions!",
+        "info": ""
       },
       {
         "date": "Tue, Nov 19",
@@ -31,6 +24,20 @@
     ],
 
     "past_events": [
+      {
+        "date": "Sat, Oct 26",
+        "title": "UB Lockdown Competition",
+        "image": "/project-files/image-files/event-images/10-26-24.png",
+        "description": "Our team will compete in this upcoming Lockdown Competition, hosted by University at Buffalo. GO WOLVERINES! Update: We got 4th place!",
+        "info": "https://lockdown.ubnetdef.org/"   
+      },
+      {
+        "date": "Wed, Oct 26",
+        "title": "WRCCDC Invitational",
+        "image": "/project-files/image-files/event-images/10-26-24-2.png",
+        "description": "Our team will be competing in the first WRCCDC Invitational of the competition year! Competition details below! Update: (Results still to be announced)",
+        "info": "https://wrccdc.org/"
+      },
       {
         "date": "Wed, Oct 16",
         "title": "Hivestorm Competition",

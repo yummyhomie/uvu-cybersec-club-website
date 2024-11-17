@@ -1,17 +1,10 @@
 {
     "upcoming_events": [
       {
-        "date": "Tue, Oct 29",
-        "title": "Competition Debrief",
-        "image": "/project-files/image-files/event-images/10-29-24.png",
-        "description": "We'll be having a quick debrief from the competing members of Lockdown & CCDC. Bring questions!",
-        "info": ""
-      },
-      {
         "date": "Tue, Nov 19",
-        "title": "Meeting with 3M Healthcare",
+        "title": "Meeting with Clyde Co.",
         "image": "/project-files/image-files/event-images/11-19-24.png",
-        "description": "We will be meeting with the Security Director of 3M Healthcare! More information to follow!",
+        "description": "We will be meeting with the Head of Cybersecurity of Clyde Co.! Bring all of your questions!",
         "info": ""
       },
       {
@@ -24,6 +17,13 @@
     ],
 
     "past_events": [
+      {
+        "date": "Tue, Oct 29",
+        "title": "Competition Debrief",
+        "image": "/project-files/image-files/event-images/10-29-24.png",
+        "description": "We'll be having a quick debrief from the competing members of Lockdown & CCDC. Bring questions!",
+        "info": ""
+      },
       {
         "date": "Sat, Oct 26",
         "title": "UB Lockdown Competition",

@@ -1,22 +1,50 @@
 {
     "upcoming_events": [
       {
-        "date": "Tue, Nov 19",
-        "title": "Meeting with Clyde Co.",
-        "image": "/project-files/image-files/event-images/11-19-24.png",
-        "description": "We will be meeting with the Head of Cybersecurity of Clyde Co.! Bring all of your questions!",
+        "date": "Tue, Dec 03 2024",
+        "title": "Palo Alto Networks Cortex Presentation",
+        "image": "/project-files/image-files/event-images/12-3-24.png",
+        "description": "We will have a Cortex Specialist from Palo Alto come present on using NG firewall along with IDS/IPS automation! It may be held virtually. More information on our Discord!",
         "info": ""
       },
       {
-        "date": "Sat, Feb 01 2025",
+        "date": "Tue, Jan 21 2025",
+        "title": "Cloud Security / Pentesting",
+        "image": "/project-files/image-files/event-images/1-21-25.png",
+        "description": "Scott Piper, an expert in cloud security will be presenting on how he exploits cloud vulnerabilities! (Which is just someone else's computer).",
+        "info": ""
+      },
+      {
+        "date": "Tue, Feb 01 2025",
         "title": "RMCCDC Qualifiers",
         "image": "/project-files/image-files/event-images/2-1-25.png",
         "description": "Our team will be competiting in National Collegiate Cyber Defense Competition Qualifiers. Send good vibes!",
         "info": "https://www.nationalccdc.org/"
+      },
+      {
+        "date": "Wed, Feb 05 2025",
+        "title": "RMCCDC Qualifiers",
+        "image": "/project-files/image-files/event-images/2-5-25.jpg",
+        "description": "Arctic Wolf will be coming to meet with us. More information to follow!",
+        "info": ""
+      },
+      {
+        "date": "Tue, Feb 11 2025",
+        "title": "Red Canary Cloud Architecture & Security",
+        "image": "/project-files/image-files/event-images/2-11-25.png",
+        "description": "We will have the priveladge of hearing from Dave Bogle, Principal Threat Researcher. Do you like cloud?",
+        "info": ""
       }
     ],
 
     "past_events": [
+      {
+        "date": "Tue, Nov 19",
+        "title": "Meeting with Clyde Co.",
+        "image": "/project-files/image-files/event-images/11-19-24.png",
+        "description": "We will be meeting with Sherrie Cowley, Head of Cybersecurity at Clyde Co.! Bring all of your questions!",
+        "info": ""
+      },
       {
         "date": "Tue, Oct 29",
         "title": "Competition Debrief",

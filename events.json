@@ -1,7 +1,7 @@
 {
     "upcoming_events": [
       {
-        "date": "Tue, Dec 03 2024",
+        "date": "Tue, Dec 03",
         "title": "Palo Alto Networks Cortex Presentation",
         "image": "/project-files/image-files/event-images/12-3-24.png",
         "description": "We will have a Cortex Specialist from Palo Alto come present on using NG firewall along with IDS/IPS automation! It may be held virtually. More information on our Discord!",
@@ -38,6 +38,13 @@
     ],
 
     "past_events": [
+      {
+        "date": "Tue, Nov 21",
+        "title": "CYSCUVU Service Project",
+        "image": "/project-files/image-files/event-images/11-21-24.jpg",
+        "description": "CYSCUVU has the oppurtunity to help out one of our local elementary schools unbox, cable manage & setup ~150 chromebooks.",
+        "info": ""
+      },
       {
         "date": "Tue, Nov 19",
         "title": "Meeting with Clyde Co.",

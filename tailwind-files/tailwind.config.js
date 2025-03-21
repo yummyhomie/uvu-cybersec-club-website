@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         'csc-gray': '#F5F5F5',
+        'cysc-green': '#179563',
       },
     },
   },

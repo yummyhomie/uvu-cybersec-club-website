@@ -3,45 +3,43 @@
     <title>Cybersecurity Club at UVU</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./tailwind-files/output.css"> <!-- Links Tailwind CSS Sheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="icon" type="image/x-icon" href="../images/cscuvu-logo-favi.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <!--| This link connects a database of icons for us to call |-->
 </head>
-<body class="bg-black w-[960px] mx-auto text-white">
+<body class="bg-black max-w-[960px] w-full mx-auto text-white">
 
-    <div id="TOP" class="grid grid-cols-3">
-        <div class="h-auto flex items-center justify-center row-span-2">
+    <div id="TOP" class="mx-auto my-4 grid gap-x-4 grid-cols-[222px,1fr,1fr] grid-rows-[1fr,1fr,1fr]">
+        <div class="row-span-3 flex items-center justify-center">
             <a href="./index.html">
-                <img class="h-52" src="./project-files/image-files/cscuvu-logo.png" alt="CSCUVU Club Logo">
+                <img class="object-contain" src="./project-files/image-files/CYSCUVU-Logo.png" alt="CYSCUVU Club Logo">
             </a>
         </div>
         
-        <div class="h-auto flex items-center justify-center font-bold rounded-lg col-span-2 mt-auto">
-            <h1 class="font-arcade text-4xl text-right pr-1">CYSCUVU</h1>
-        </div> 
+        <div class="col-span-2 row-span-2">
+            <h1 class="font-arcade text-[100px] text-center text-cysc-green">CYSCUVU</h1>
+        </div>      
 
-        <div class="h-fit flex justify-end gap-4 text-sm col-span-2 font-arcade my-auto">
-            <a href="./project-files/about.html">About</a>
-            <a href="./project-files/meetings.html">Meetings</a>
-            <a href="./project-files/members.html">Members</a>
-            <a class="pr-[7.5px]" href="./project-files/contact.html">Contact</a>
-        </div>       
+        <div class="flex justify-center h-fit mb-auto mx-auto gap-4 text-[12pt] col-start-2 col-span-2 font-arcade bg-white bg-opacity-10 rounded-full">
+            <a class="px-4 py-1 rounded-full duration-700 hover:bg-cysc-green hover:drop-shadow-[0_0_20px_rgba(23,149,99,1)]" href="./project-files/about.html">About</a>
+            <a class="px-4 py-1 rounded-full duration-700 hover:bg-cysc-green hover:drop-shadow-[0_0_20px_rgba(23,149,99,1)]" href="./project-files/meetings.html">Meetings</a>
+            <a class="px-4 py-1 rounded-full duration-700 hover:bg-cysc-green hover:drop-shadow-[0_0_20px_rgba(23,149,99,1)]" href="./project-files/members.html">Members</a>
+            <a class="px-4 py-1 rounded-full duration-700 hover:bg-cysc-green hover:drop-shadow-[0_0_20px_rgba(23,149,99,1)]" href="./project-files/contact.html">Contact</a>
+        </div>  
     </div>
 
-    <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mb-32 rounded-full opacity-25"></hr>
+    <hr id="LINE-SEPERATOR-THING" class="my-20 opacity-0"></hr>
 
-    <div class="font-tommy text-5xl justify-center w-[90%] mx-auto">
-        <p>CYSCUVU is a student run organization here at Utah Valley University.
-           We practice info-sec, privacy, and hacking.</p>      
+    <div class="font-tommy text-5xl">
+        <p><span class="text-[50px] font-bold">CYSCUVU</span> is a student run organization here at Utah Valley University.
+           We practice <span class="underline underline-offset-8 decoration-4 decoration-cysc-gray rounded-full">cybersecurity, hacking and info-sec.</span></p>
     </div>
 
-    <div class="font-tommy text-6xl flex justify-center gap-9 w-[90%] mx-auto mt-24">
-        <a href="https://discord.gg/mtZ94KvZYz"><i class="fab fa-discord"></i></a>
-        <a href="https://github.com/tech-clubs-uvu"><i class="fab fa-github"></i></a>            <!-- Do not remove these links! Please :) -->
-        <a href="https://www.linkedin.com/company/cscuvu"><i class="fab fa-linkedin"></i></a> 
+    <div class="fixed bottom-7 left-0 right-0 text-6xl text-center">
+        <a class="duration-700 hover:drop-shadow-[-10px_0_20px_rgba(23,149,99,1)]" href="https://discord.gg/mtZ94KvZYz"><i class="fab fa-discord"></i></a>
+        <a class="duration-700 hover:drop-shadow-[0_0_20px_rgba(23,149,99,1)]" href="https://github.com/CYSCUVU"><i class="fab fa-github"></i></a>            <!-- Do not remove these links! Please :) -->
+        <a class="duration-700 hover:drop-shadow-[10px_0_20px_rgba(23,149,99,1)]" href="https://www.linkedin.com/company/cscuvu"><i class="fab fa-linkedin"></i></a> 
     </div>
-
-    <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mt-32 rounded-full opacity-25 mb-32"></hr>
 
 </body>
 </html>

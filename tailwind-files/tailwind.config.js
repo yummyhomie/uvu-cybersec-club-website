@@ -14,10 +14,23 @@ module.exports = {
       },
       colors: {
         'csc-gray': '#F5F5F5',
+        'cysc-gray': '#393a3b',
         'cysc-green': '#179563',
+      },
+      animation: {
+        typewriter: "typewriter 7s steps(11) forwards"
+      },
+      keyframes: {
+        typewriter: {
+          to: {
+            left: "100%"
+          }
+        }
       },
     },
   },
   plugins: [],
 }
+
+
 

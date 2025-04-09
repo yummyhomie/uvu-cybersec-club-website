@@ -27,14 +27,29 @@
     </div>
 
     <hr id="LINE-SEPERATOR-THING" class="my-20 opacity-0"></hr>
-    
-    <p class="font-arcade text-5xl text-center pb-16 text-[#005ee6]">Upcoming Meetings</p>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white p-6">
+
+        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg p-2 mb-7">
+            <div class="space-y-1">
+                <div class="flex items-center p-2">
+                    <div class="w-48">DATE</div>
+                    <div class="w-48">LOCATION</div>
+                    <div class="flex-grow">TEST EVENT TITLE</div>
+                    <div class="px-2 ml-2">IN X AMOUNT OF TIME</div>
+                </div>
+            </div>
+        </div>
 
     <div id="upcoming-meetings"></div>
-
-    <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mt-32 mb-32 rounded-full opacity-25"></hr>
-
-    <p class="font-arcade text-5xl text-center pb-16 text-[#005ee6]">Past Meetings</p>
 
     <div id="past-meetings"></div>
     
@@ -45,7 +60,7 @@
         
         jsonData.forEach(event => {
             const eventBlock = document.createElement('div');
-            eventBlock.className = 'grid grid-cols-2 gap-[15px] mt-6';
+            eventBlock.className = '';
 
             eventBlock.innerHTML = `
             <div id="LEFT-SIDE" class="col-start-1 col-end-2 bg-csc-gray bg-opacity-[0.06] rounded-lg p-3 transition-all duration-700 hover:shadow-[20px_20px_0px_-6px_#005ee6] rounded-2xl">

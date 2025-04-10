@@ -28,68 +28,32 @@
 
     <hr id="LINE-SEPERATOR-THING" class="my-20 opacity-0"></hr>
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Calendar</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-</head>
 <body class="bg-gray-900 text-white p-6">
 
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg p-2 mb-7">
-            <div class="space-y-1">
-                <div class="flex items-center p-2">
-                    <div class="w-48">DATE</div>
-                    <div class="w-48">LOCATION</div>
-                    <div class="flex-grow">TEST EVENT TITLE</div>
-                    <div class="px-2 ml-2">IN X AMOUNT OF TIME</div>
-                </div>
-            </div>
+        <div class="bg-white bg-opacity-10 rounded-lg p-2 mb-7">
+            <div class="space-y-[3px]" id="upcoming-meetings"></div>
         </div>
 
-    <div id="upcoming-meetings"></div>
-
-    <div id="past-meetings"></div>
+        <div class="bg-white bg-opacity-10 rounded-lg p-2 mb-7">
+            <div class="space-y-[3px]" id="past-meetings"></div>
+        </div>
     
-    <script>
-    // Function to generate the upcoming event blocks/elements that will appear in the above code
+<script>
     function generateUpcomingEventBlocks(jsonData) {
         const eventContainer = document.querySelector('#upcoming-meetings');
         
-        jsonData.forEach(event => {
+        jsonData.forEach((event, index) => {
+            const roundedClass = 
+                index === 0 ? 'rounded-t-lg' : 
+                index === jsonData.length - 1 ? 'rounded-b-lg' : '';
+
             const eventBlock = document.createElement('div');
-            eventBlock.className = '';
-
             eventBlock.innerHTML = `
-            <div id="LEFT-SIDE" class="col-start-1 col-end-2 bg-csc-gray bg-opacity-[0.06] rounded-lg p-3 transition-all duration-700 hover:shadow-[20px_20px_0px_-6px_#005ee6] rounded-2xl">
-
-                <div id="date" class="text-right text-[#23d18b] font-tommy text-2xl">
-                    ${event.date}
-                </div>
-
-                <div id="title" class="text-right font-tommy text-3xl mb-[6px]">
-                    ${event.title}
-                </div>
-
-                <div id="image">
-                    <img class="w-full h-full object-hidden rounded-md" src="${event.image}">
-                </div>
-
-            </div>
-
-            <div id="RIGHT-SIDE" class="col-start-2 col-end-3 rounded-lg p-3">
-
-                <div id="description" class="font-tommy text-2xl text-right">                
-                    ${event.description}
-                </div>                                                                      <!-- 0_1_2_3_Color -->
-                                                                                            <!-- 0_1_ = Horizontal/Vertical control of shadow -->
-                <div id="info" class="font-tommy text-2xl text-right mt-[55px]">            <!-- 2_ = Blur Radius (Softer or harder shadow) -->
-                                                                                            <!-- 3_ = Spread Radius (Shadow bigger or smaller than element) -->                            
-                    <a href="${event.info}" class="transition-all duration-700 hover:shadow-[10px_10px_0px_-6px_#005ee6]">${event.info}</a>                                                 
-                                                                                                                        
-                </div>                                                                                                  
+            <div class="flex items-center bg-white bg-opacity-15 p-1 ${roundedClass}">
+                <div class="w-48 font-tommy text-xl">${event.date}</div>
+                <div class="w-48 font-tommy text-xl">${event.location}</div>
+                <div class="flex-grow font-tommy text-xl">${event.title}</div>
+                <div class="px-2 ml-2">${event.timeUntil}</div>
             </div>
             `;
             
@@ -98,46 +62,29 @@
     }
 
     fetch('../events.json')
-    .then(response => response.json())
-    .then(data => {
-        // Generate blocks for upcoming events
-        generateUpcomingEventBlocks(data.upcoming_events);
-    })
-    .catch(error => console.error('Error fetching JSON:', error)); 
+        .then(response => response.json())
+        .then(data => {
+            generateUpcomingEventBlocks(data.upcoming_events);
+        })
+        .catch(error => console.error('Error fetching JSON:', error)); 
+</script>
 
-    </script>
-
-    <script>
-    // Function to generate the past event blocks/elements that will appear in the above code
+<script>
     function generatePastEventBlocks(jsonData) {
         const eventContainer = document.querySelector('#past-meetings');
         
-        jsonData.forEach(event => {
+        jsonData.forEach((event, index) => {
+            const roundedClass = 
+                index === 0 ? 'rounded-t-lg' : 
+                index === jsonData.length - 1 ? 'rounded-b-lg' : '';
+
             const eventBlock = document.createElement('div');
-            eventBlock.className = 'grid grid-cols-2 gap-[15px] mt-6';
-
             eventBlock.innerHTML = `
-            <div id="LEFT-SIDE" class="col-start-1 col-end-2 bg-csc-gray bg-opacity-[0.06] rounded-lg p-3 transition-all duration-700 hover:shadow-[20px_20px_0px_-6px_darkorange] rounded-2xl">
-
-                <div id="date" class="text-right text-[#23d18b] font-tommy text-2xl">
-                    ${event.date}
-                </div>
-
-                <div id="title" class="text-right font-tommy text-3xl mb-[6px]">
-                    ${event.title}
-                </div>
-
-                <div id="image">
-                    <img class="w-full h-full object-hidden rounded-md" src="${event.image}">
-                </div>
-
-            </div>
-
-            <div id="RIGHT-SIDE" class="col-start-2 col-end-3 rounded-lg p-3">
-
-                <div id="description" class="font-tommy text-2xl text-right">
-                    ${event.description}
-                </div>
+            <div class="flex items-center bg-white bg-opacity-15 p-1 ${roundedClass}">
+                <div class="w-48 font-tommy text-xl">${event.date}</div>
+                <div class="w-48 font-tommy text-xl">${event.location}</div>
+                <div class="flex-grow font-tommy text-xl">${event.title}</div>
+                <div class="px-2 ml-2">${event.timeUntil}</div>
             </div>
             `;
             
@@ -146,16 +93,11 @@
     }
 
     fetch('../events.json')
-    .then(response => response.json())
-    .then(data => {
-        // Generate blocks for past events
-        generatePastEventBlocks(data.past_events);
-    })
-    .catch(error => console.error('Error fetching JSON:', error)); 
-
-    </script>
-
-    <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mt-32 mb-32 rounded-full opacity-25"></hr>
-
+        .then(response => response.json())
+        .then(data => {
+            generatePastEventBlocks(data.past_events);
+        })
+        .catch(error => console.error('Error fetching JSON:', error)); 
+</script>
 </body>
 </html>                   

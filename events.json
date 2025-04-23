@@ -1,98 +1,82 @@
 {
-    "upcoming_events": [
+    "cyscuvu_events": [
       {
-        "date": "Tue, Dec 03",
+        "date": "2024-12-03",
+        "location": "CS-404",
         "title": "Palo Alto Networks Cortex Presentation",
-        "image": "/project-files/image-files/event-images/12-3-24.png",
-        "description": "We will have a Cortex Specialist from Palo Alto come present on using NG firewall along with IDS/IPS automation! It may be held virtually. More information on our Discord!",
-        "info": ""
+        "description": "We will have a Cortex Specialist from Palo Alto come present on using NG firewall along with IDS/IPS automation! It may be held virtually. More information on our Discord!"
       },
       {
-        "date": "Tue, Jan 21 2025",
+        "date": "2025-01-21",
+        "location": "CS-404",
         "title": "Cloud Security / Pentesting",
-        "image": "/project-files/image-files/event-images/1-21-25.png",
-        "description": "Scott Piper, an expert in cloud security will be presenting on how he exploits cloud vulnerabilities! (Which is just someone else's computer).",
-        "info": ""
+        "description": "Scott Piper, an expert in cloud security will be presenting on how he exploits cloud vulnerabilities! (Which is just someone else's computer)."
       },
       {
-        "date": "Tue, Feb 01 2025",
+        "date": "2025-02-01",
         "title": "RMCCDC Qualifiers",
-        "image": "/project-files/image-files/event-images/2-1-25.png",
-        "description": "Our team will be competiting in National Collegiate Cyber Defense Competition Qualifiers. Send good vibes!",
-        "info": "https://www.nationalccdc.org/"
+        "location": "CS-404",
+        "description": "Our team will be competiting in National Collegiate Cyber Defense Competition Qualifiers. Send good vibes!"
       },
       {
-        "date": "Wed, Feb 05 2025",
+        "date": "2025-02-05",
+        "location": "CS-404",
         "title": "Arctic Wolf Presentation",
-        "image": "/project-files/image-files/event-images/2-5-25.jpg",
-        "description": "Arctic Wolf will be coming to meet with us. More information to follow!",
-        "info": ""
+        "description": "Arctic Wolf will be coming to meet with us. More information to follow!"
       },
       {
-        "date": "Tue, Feb 11 2025",
+        "date": "2025-02-11",
+        "location": "CS-404",
         "title": "Red Canary Cloud Architecture & Security",
-        "image": "/project-files/image-files/event-images/2-11-25.png",
-        "description": "We will have the priveladge of hearing from Dave Bogle, Principal Threat Researcher. Do you like cloud?",
-        "info": ""
-      }
-    ],
-
-    "past_events": [
+        "description": "We will have the priveladge of hearing from Dave Bogle, Principal Threat Researcher. Do you like cloud?"
+      },
       {
-        "date": "Tue, Nov 21",
+        "date": "2024-11-21",
+        "location": "CS-404",
         "title": "CYSCUVU Service Project",
-        "image": "/project-files/image-files/event-images/11-21-24.jpg",
-        "description": "CYSCUVU has the oppurtunity to help out one of our local elementary schools unbox, cable manage & setup ~150 chromebooks.",
-        "info": ""
+        "description": "CYSCUVU has the oppurtunity to help out one of our local elementary schools unbox, cable manage & setup ~150 chromebooks."
       },
       {
-        "date": "Tue, Nov 19",
+        "date": "2024-11-19",
+        "location": "CS-404",
         "title": "Meeting with Clyde Co.",
-        "image": "/project-files/image-files/event-images/11-19-24.png",
-        "description": "We will be meeting with Sherrie Cowley, Head of Cybersecurity at Clyde Co.! Bring all of your questions!",
-        "info": ""
+        "description": "We will be meeting with Sherrie Cowley, Head of Cybersecurity at Clyde Co.! Bring all of your questions!"
       },
       {
-        "date": "Tue, Oct 29",
+        "date": "2024-10-29",
+        "location": "CS-404",
         "title": "Competition Debrief",
-        "image": "/project-files/image-files/event-images/10-29-24.png",
-        "description": "We'll be having a quick debrief from the competing members of Lockdown & CCDC. Bring questions!",
-        "info": ""
+        "description": "We'll be having a quick debrief from the competing members of Lockdown & CCDC. Bring questions!"
       },
       {
-        "date": "Sat, Oct 26",
+        "date": "2024-10-26",
+        "location": "CS-404",
         "title": "UB Lockdown Competition",
-        "image": "/project-files/image-files/event-images/10-26-24.png",
-        "description": "Our team will compete in this upcoming Lockdown Competition, hosted by University at Buffalo. GO WOLVERINES! Update: We got 4th place!",
-        "info": "https://lockdown.ubnetdef.org/"   
+        "description": "Our team will compete in this upcoming Lockdown Competition, hosted by University at Buffalo. GO WOLVERINES! Update: We got 4th place!"
       },
       {
-        "date": "Wed, Oct 26",
+        "date": "2024-10-26",
+        "location": "CS-404",
         "title": "WRCCDC Invitational",
-        "image": "/project-files/image-files/event-images/10-26-24-2.png",
-        "description": "Our team will be competing in the first WRCCDC Invitational of the competition year! Competition details below! Update: (Results still to be announced)",
-        "info": "https://wrccdc.org/"
+        "description": "Our team will be competing in the first WRCCDC Invitational of the competition year! Competition details below! Update: (Results still to be announced)"
       },
       {
-        "date": "Wed, Oct 16",
+        "date": "2024-10-16",
+        "location": "CS-404",
         "title": "Hivestorm Competition",
-        "image": "/project-files/image-files/event-images/10-16-24.png",
-        "description": "Our team sets out to compete for 1st place in this upcoming Hivestorm competition. Competition details below.",
-        "info": "https://www.hivestorm.org/"
+        "description": "Our team sets out to compete for 1st place in this upcoming Hivestorm competition. Competition details below."
       },
       {
-        "date": "Tue, Sep 03",
+        "date": "2024-09-03",
+        "location": "CS-404",
         "title": "Meeting with the NSA",
-        "image": "/project-files/image-files/event-images/9-03-24.png",
-        "description": "We'll hear from Cybersecurity/InfoSec industry experts from the NSA come talk to us about anything & how to work for the NSA. Possible Q&A at the end. Invite everyone you know!",
-        "info": ""
+        "description": "We'll hear from Cybersecurity/InfoSec industry experts from the NSA come talk to us about anything & how to work for the NSA. Possible Q&A at the end. Invite everyone you know!"
       },
       {
-        "date": "Tue, Aug 27",
+        "date": "2024-08-27",
+        "location": "CS-404",
         "title": "First Club Meeting of Fall 2024",
-        "image": "/project-files/image-files/event-images/8-27-24.png",
-        "description": "The first inaugural meeting for the Cybersecurity Club at UVU. We'll introduce the club, meet everyone, and vote for new leadership. Anyone is welcome to run for leadership!",
-        "info": ""
+        "description": "The first inaugural meeting for the Cybersecurity Club at UVU. We'll introduce the club, meet everyone, and vote for new leadership. Anyone is welcome to run for leadership!"
       }
     ]
   }

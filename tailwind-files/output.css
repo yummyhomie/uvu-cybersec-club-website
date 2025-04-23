@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -659,6 +659,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-64 {
   margin-bottom: 16rem;
 }
@@ -669,10 +673,6 @@ video {
 
 .mb-auto {
   margin-bottom: auto;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .mt-16 {
@@ -687,20 +687,16 @@ video {
   margin-top: 1.25rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
-.mb-14 {
-  margin-bottom: 3.5rem;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-40 {
   margin-bottom: 10rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .flex {
@@ -728,6 +724,10 @@ video {
   width: 12rem;
 }
 
+.w-\[100px\] {
+  width: 100px;
+}
+
 .w-\[285px\] {
   width: 285px;
 }
@@ -744,20 +744,22 @@ video {
   width: 100%;
 }
 
-.w-\[75\%\] {
-  width: 75%;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
 .max-w-\[960px\] {
   max-width: 960px;
 }
 
 .flex-grow {
   flex-grow: 1;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .grid-cols-3 {
@@ -901,11 +903,6 @@ video {
   padding: 1.5rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -926,6 +923,10 @@ video {
 
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -981,6 +982,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1018,8 +1024,20 @@ video {
   text-decoration-color: #393a3b;
 }
 
+.decoration-cysc-green {
+  text-decoration-color: #179563;
+}
+
 .decoration-4 {
   text-decoration-thickness: 4px;
+}
+
+.decoration-2 {
+  text-decoration-thickness: 2px;
+}
+
+.decoration-1 {
+  text-decoration-thickness: 1px;
 }
 
 .underline-offset-4 {
@@ -1028,6 +1046,10 @@ video {
 
 .underline-offset-8 {
   text-underline-offset: 8px;
+}
+
+.underline-offset-2 {
+  text-underline-offset: 2px;
 }
 
 .opacity-0 {
@@ -1042,9 +1064,32 @@ video {
   transition-duration: 700ms;
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.hover\:rounded-md:hover {
+  border-radius: 0.375rem;
+}
+
+.hover\:rounded-sm:hover {
+  border-radius: 0.125rem;
+}
+
 .hover\:bg-cysc-green:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(23 149 99 / var(--tw-bg-opacity));
+}
+
+.hover\:text-cysc-green:hover {
+  --tw-text-opacity: 1;
+  color: rgb(23 149 99 / var(--tw-text-opacity));
 }
 
 .hover\:drop-shadow-\[-10px_0_20px_rgba\(23\2c 149\2c 99\2c 1\)\]:hover {

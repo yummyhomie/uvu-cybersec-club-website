@@ -28,11 +28,12 @@
 
     <hr id="LINE-SEPERATOR-THING" class="my-20 opacity-0"></hr>
 
-<body class="bg-gray-900 text-white p-6">
+    <div class="font-tommy text-4xl text-center mb-4">The Cybersecurity Club at UVU has adjorned club meetings for the summer. We'll pick back up starting in Fall 2025!</div>
+    <div class="font-tommy text-lg text-center mb-40">(We still meet unoffically on our <span><a  class="underline underline-offset-2 decoration-2 decoration-cysc-green duration-700 hover:bg-cysc-green hover:rounded-sm hover:drop-shadow-[0_0_20px_rgba(23,149,99,1)]" href="https://discord.gg/mtZ94KvZYz">discord</a></span>)</div>
 
     <div class="font-arcade text-4xl text-center mb-7">Upcoming Meetings</div>
 
-    <div class="bg-white bg-opacity-10 rounded-lg p-2 mb-16 w-[100px]">
+    <div class="bg-white bg-opacity-10 rounded-lg p-2 mb-7">
         <div class="space-y-[3px]" id="upcoming-meetings"></div>
     </div>
 
@@ -41,65 +42,94 @@
     <div class="bg-white bg-opacity-10 rounded-lg p-2 mb-7">
         <div class="space-y-[3px]" id="past-meetings"></div>
     </div>
+
+    <hr id="LINE-SEPERATOR-THING" class="my-20 opacity-0"></hr>
     
 <script>
-    function generateUpcomingEventBlocks(jsonData) {
-        const eventContainer = document.querySelector('#upcoming-meetings');
-        
-        jsonData.forEach((event, index) => {
-            const roundedClass = 
-                index === 0 ? 'rounded-t-lg' : 
-                index === jsonData.length - 1 ? 'rounded-b-lg' : '';
+function formatDisplayDate(dateString) {
+    const localDateString = `${dateString}T00:00:00`;
+    const date = new Date(localDateString);
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const dayOfWeek = days[date.getDay()];
+    const month = months[date.getMonth()];
+    const dayOfMonth = date.getDate();
+    return `${dayOfWeek}, ${month} ${dayOfMonth}`;
+}
 
-            const eventBlock = document.createElement('div');
-            eventBlock.innerHTML = `
-            <div class="flex items-center bg-white bg-opacity-15 p-1 ${roundedClass}">
-                <div class="w-48 font-tommy text-xl">${event.date}</div>
-                <div class="w-48 font-tommy text-xl">${event.location}</div>
-                <div class="flex-grow font-tommy text-xl">${event.title}</div>
-            </div>
-            `;
-            
-            eventContainer.appendChild(eventBlock);
-        });
-    }
+function parseEventDate(dateString) {
+    const [year, month, day] = dateString.split('-').map(num => parseInt(num, 10));
+    return new Date(year, month - 1, day);
+}
 
+function loadAndSortEvents() {
     fetch('../events.json')
         .then(response => response.json())
         .then(data => {
-            generateUpcomingEventBlocks(data.upcoming_events);
-        })
-        .catch(error => console.error('Error fetching JSON:', error)); 
-</script>
-
-<script>
-    function generatePastEventBlocks(jsonData) {
-        const eventContainer = document.querySelector('#past-meetings');
-        
-        jsonData.forEach((event, index) => {
-            const roundedClass = 
-                index === 0 ? 'rounded-t-lg' : 
-                index === jsonData.length - 1 ? 'rounded-b-lg' : '';
-
-            const eventBlock = document.createElement('div');
-            eventBlock.innerHTML = `
-            <div class="flex items-center bg-white bg-opacity-15 p-1 ${roundedClass}">
-                <div class="w-48 font-tommy text-xl">${event.date}</div>
-                <div class="w-48 font-tommy text-xl">${event.location}</div>
-                <div class="flex-grow font-tommy text-xl">${event.title}</div>
-            </div>
-            `;
+            const allEvents = data.cyscuvu_events || [];
             
-            eventContainer.appendChild(eventBlock);
-        });
-    }
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); 
 
-    fetch('../events.json')
-        .then(response => response.json())
-        .then(data => {
-            generatePastEventBlocks(data.past_events);
+            const futureEvents = [];
+            const pastEvents = [];
+            
+            allEvents.forEach(event => {
+                const eventDate = parseEventDate(event.date);
+                
+                if (eventDate >= today) {
+                    futureEvents.push(event);
+                } else {
+                    pastEvents.push(event);
+                }
+            });
+            
+            futureEvents.sort((a, b) => parseEventDate(a.date) - parseEventDate(b.date));
+            
+            pastEvents.sort((a, b) => parseEventDate(b.date) - parseEventDate(a.date));
+            
+            generateEventBlocks(futureEvents, '#upcoming-meetings');
+            generateEventBlocks(pastEvents, '#past-meetings');
         })
-        .catch(error => console.error('Error fetching JSON:', error)); 
+        .catch(error => console.error('Error fetching JSON:', error));
+}
+
+function generateEventBlocks(jsonData, containerId) {
+    const eventContainer = document.querySelector(containerId);
+    eventContainer.innerHTML = '';
+    
+    if (jsonData.length === 0) {
+        const emptyMessage = document.createElement('div');
+        emptyMessage.innerHTML = `
+        <div class="flex items-center bg-white bg-opacity-15 p-1 rounded-lg">
+            <div class="w-full font-tommy text-xl text-center">No events to display</div>
+        </div>
+        `;
+        eventContainer.appendChild(emptyMessage);
+        return;
+    }
+    
+    jsonData.forEach((event, index) => {
+        const roundedClass =
+            index === 0 ? 'rounded-t-lg' :
+            index === jsonData.length - 1 ? 'rounded-b-lg' : '';
+        const eventBlock = document.createElement('div');
+        
+        const displayDate = formatDisplayDate(event.date);
+        
+        eventBlock.innerHTML = `
+        <div class="flex items-center bg-white bg-opacity-15 p-1 ${roundedClass}">
+            <div class="w-48 font-tommy text-xl">${displayDate}</div>
+            <div class="w-48 font-tommy text-xl">${event.location}</div>
+            <div class="flex-grow font-tommy text-xl">${event.title}</div>
+        </div>
+        `;
+        
+        eventContainer.appendChild(eventBlock);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadAndSortEvents);
 </script>
 </body>
 </html>                   

@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Jonathan",
+      "position": "President",
+      "image": "../project-files/image-files/xtra-images/debian.png"
+    },
+    {
+      "name": "Erik",
+      "position": "Vice President",
+      "image": "../project-files/image-files/xtra-images/nixos.svg"
+    },
+    {
+      "name": "Kenny",
+      "position": "Secretary",
+      "image": "../project-files/image-files/members/kenny.png"
+    },
+    {
+      "name": "Derek",
+      "position": "Competition Lead",
+      "image": "../project-files/image-files/xtra-images/kali.svg"
+    },
+    {
+        "name": "Apollonia",
+        "position": "Member",
+        "image": "../project-files/image-files/members/apollonia.jpg"
+    },
+    {
+        "name": "Colton",
+        "position": "Member",
+        "image": "../project-files/image-files/members/colton.jpg"
+    },
+    {
+      "name": "Matt",
+      "position": "Member",
+      "image": "../project-files/image-files/xtra-images/kali2.svg"
+    },
+    {
+      "name": "Rylan",
+      "position": "Member",
+      "image": "../project-files/image-files/xtra-images/manjaro.svg"
+    },
+    {
+      "name": "Squatchy",
+      "position": "Member",
+      "image": "../project-files/image-files/xtra-images/kali2.svg"
+    },
+    {
+      "name": "Vagner",
+      "position": "Member",
+      "image": "../project-files/image-files/xtra-images/arch.png"
+    }
+  ]

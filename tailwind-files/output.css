@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -664,8 +664,8 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
+.mb-32 {
+  margin-bottom: 8rem;
 }
 
 .mb-4 {
@@ -698,10 +698,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-32 {
-  margin-bottom: 8rem;
 }
 
 .flex {

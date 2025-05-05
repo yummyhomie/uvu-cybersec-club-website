@@ -34,12 +34,18 @@
 
     <div id="memberGrid" class="container mx-auto mb-32"></div>
 
+    <p class="font-arcade text-4xl text-cysc-green text-center my-12">Alumni</p>
+
+    <div id="alumniGrid" class="container mx-auto mb-32"></div>
+
     <script>
         function getMembers() {
             fetch('members.json')
                 .then(response => response.json())
                 .then(data => {
-                    showMembers(data);
+                    showMembers(data.members, 'memberGrid');
+
+                    showAlumni(data.alumni, 'alumniGrid');
                 })
                 .catch(error => {
                     console.error('Error loading members:', error);
@@ -47,7 +53,7 @@
         }
 
         function showMembers(members) {
-            const memberGrid = document.getElementById('memberGrid');
+            const targetGrid = document.getElementById('memberGrid');
             
             // Create the grid container
             const gridContainer = document.createElement('div');
@@ -74,6 +80,36 @@
             
             // Add the grid to the page
             memberGrid.appendChild(gridContainer);
+        }
+
+        function showAlumni(alumni) {
+            const alumniGrid = document.getElementById('alumniGrid');
+            
+            // Create the grid container
+            const gridContainer = document.createElement('div');
+            gridContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 grid-flow-row';
+            
+            // Generate HTML for each member
+            alumni.forEach(alumni => {
+                const memberCard = document.createElement('div');
+                
+                memberCard.innerHTML = `
+                    <div class="flex flex-col h-full">
+                        <div class="relative w-full aspect-square overflow-hidden rounded-lg">
+                            <img class="w-full h-full object-cover absolute inset-0" src="${alumni.image} alt="${alumni.name}'s image that isn't loading for some reason :/ *insert thinking emoji here*">
+                        </div>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 mt-4">
+                            <p class="font-arcade text-xl text-center truncate">${alumni.name}</p>
+                            <p class="font-tommy text-lg text-center">${alumni.position}</p>
+                        </div>
+                    </div>
+                `;
+                
+                gridContainer.appendChild(memberCard);
+            });
+            
+            // Add the grid to the page
+            alumniGrid.appendChild(gridContainer);
         }
 
         // Load members when the page loads

@@ -1,4 +1,5 @@
-[
+{
+  "members": [
     {
       "name": "Jonathan",
       "position": "President",
@@ -7,7 +8,7 @@
     {
       "name": "Erik",
       "position": "Vice President",
-      "image": "../project-files/image-files/xtra-images/nixos.svg"
+      "image": "../project-files/image-files/members/erik.jpeg"
     },
     {
       "name": "Kenny",
@@ -49,4 +50,13 @@
       "position": "Member",
       "image": "../project-files/image-files/xtra-images/arch.png"
     }
+  ],
+
+  "alumni": [
+    {
+      "name": "Leo",
+      "position": "Member",
+      "image": "../project-files/image-files/xtra-images/debian.png"
+    }
   ]
+}

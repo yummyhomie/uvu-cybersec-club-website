@@ -28,114 +28,93 @@
         </div>  
     </div>
 
-    <hr id="LINE-SEPERATOR-THING" class="my-20 opacity-0"></hr>
+    <hr id="LINE-SEPERATOR-THING" class="my-12 opacity-0"></hr>
 
-    <p class="font-arcade text-5xl text-center pb-16 text-[#005ee6]">Leadership & Members</p>
+    <p class="font-arcade text-4xl text-cysc-green text-center my-12">Leadership & Members</p>
 
-    <div id="LEADERSHIP-SECTION" class="grid grid-cols-3 gap-[15px] mt-5">
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative"> <!-- relative: Ensures that the child img is positioned relative to this container -->
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/xtra-images/linux.png">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Jonathan</div>
-        </div>
+    <div id="memberGrid" class="container mx-auto mb-32"></div>
 
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-fill object-center rounded-md" src="./image-files/xtra-images/debian.png">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Erik Donadel</div>
-        </div>
+    <p class="font-arcade text-4xl text-cysc-green text-center my-12">Alumni</p>
 
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/members/11.png">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Kenny Christiansen</div>
-        </div>
-    </div>
-    <div id="TITLE-SECTION" class="grid grid-cols-3 gap-[15px]">
-        <div class="pt-2 pl-[2px] font-tommy text-3xl text-[#ff3300]">President</div>
-        <div class="pt-2 pl-[2px] font-tommy text-3xl text-[#ff3300]">Vice-President</div>
-        <div class="pt-2 pl-[2px] font-tommy text-3xl text-[#ff3300]">Secretary</div>
-    </div>
+    <div id="alumniGrid" class="container mx-auto mb-32"></div>
 
-    <div id="LEADERSHIP-SECTION-PART-2" class="grid grid-cols-3 gap-[15px] mt-5">
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/xtra-images/kali-purple.png">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Derek Haskell</div>
-        </div>
-    </div>
+    <script>
+        function getMembers() {
+            fetch('members.json')
+                .then(response => response.json())
+                .then(data => {
+                    showMembers(data.members, 'memberGrid');
 
-    <div id="TITLE-SECTION-PART-2" class="grid grid-cols-3 gap-[15px]">
-        <div class="pt-2 pl-[2px] font-tommy text-3xl text-[#ff3300]">Competition Lead</div>
-    </div>
+                    showAlumni(data.alumni, 'alumniGrid');
+                })
+                .catch(error => {
+                    console.error('Error loading members:', error);
+                });
+        }
 
-    <div id="HOMIES-SECTION" class="grid grid-cols-3 gap-[15px] mt-32">
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative"> <!-- relative: Ensures that the child img is positioned relative to this container -->
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/members/12.jpg">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Apollonia</div>
-        </div>
+        function showMembers(members) {
+            const targetGrid = document.getElementById('memberGrid');
+            
+            // Create the grid container
+            const gridContainer = document.createElement('div');
+            gridContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 grid-flow-row';
+            
+            // Generate HTML for each member
+            members.forEach(member => {
+                const memberCard = document.createElement('div');
+                
+                memberCard.innerHTML = `
+                    <div class="flex flex-col h-full">
+                        <div class="relative w-full aspect-square overflow-hidden rounded-lg">
+                            <img class="w-full h-full object-cover absolute inset-0" src="${member.image}">
+                        </div>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 mt-4">
+                            <p class="font-arcade text-xl text-center truncate" title="${member.name}">${member.name}</p>
+                            <p class="font-tommy text-lg text-center">${member.position}</p>
+                        </div>
+                    </div>
+                `;
+                
+                gridContainer.appendChild(memberCard);
+            });
+            
+            // Add the grid to the page
+            memberGrid.appendChild(gridContainer);
+        }
 
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/members/5.jpg">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Brandon</div>
-        </div>
+        function showAlumni(alumni) {
+            const alumniGrid = document.getElementById('alumniGrid');
+            
+            // Create the grid container
+            const gridContainer = document.createElement('div');
+            gridContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 grid-flow-row';
+            
+            // Generate HTML for each member
+            alumni.forEach(alumni => {
+                const memberCard = document.createElement('div');
+                
+                memberCard.innerHTML = `
+                    <div class="flex flex-col h-full">
+                        <div class="relative w-full aspect-square overflow-hidden rounded-lg">
+                            <img class="w-full h-full object-cover absolute inset-0" src="${alumni.image}">
+                        </div>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 mt-4">
+                            <p class="font-arcade text-xl text-center truncate">${alumni.name}</p>
+                            <p class="font-tommy text-lg text-center">${alumni.position}</p>
+                        </div>
+                    </div>
+                `;
+                
+                gridContainer.appendChild(memberCard);
+            });
+            
+            // Add the grid to the page
+            alumniGrid.appendChild(gridContainer);
+        }
 
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/members/6.jpg">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Colton</div>
-        </div>
-
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative"> <!-- relative: Ensures that the child img is positioned relative to this container -->
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/members/11.jpeg">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Cole H.</div>
-        </div>
-
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/xtra-images/lmao.jpg">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Jacob Earl</div>
-        </div>
-
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative"> <!-- relative: Ensures that the child img is positioned relative to this container -->
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/xtra-images/arch.png">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Jordan Perry</div>
-        </div>
-
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/xtra-images/kali.png">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Skylar Siggard</div>
-        </div>
-
-        <div class="bg-csc-gray bg-opacity-[0.06] rounded-lg grid grid-rows-[280px,fit,fit] p-3">
-            <div id="MEMBER-PFP" class="w-[285px] h-[285px] overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./image-files/members/14.jpeg">
-            </div>
-            <div id="MEMBER-NM" class="pt-2 font-tommy text-4xl">Vagner</div>
-        </div>
-    </div>
-
-    
-
-
-    <hr id="LINE-SEPERATOR-THING" class="border-[1.4px] w-[95%] mx-auto mt-32 mb-64 rounded-full opacity-25">
-    </hr>
+        // Load members when the page loads
+        document.addEventListener('DOMContentLoaded', getMembers);
+    </script>
 
 </body>
 </html>

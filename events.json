@@ -1,82 +1,9 @@
 {
     "cyscuvu_events": [
       {
-        "date": "2024-12-03",
-        "location": "CS-404",
-        "title": "Palo Alto Networks Cortex Presentation",
-        "description": "We will have a Cortex Specialist from Palo Alto come present on using NG firewall along with IDS/IPS automation! It may be held virtually. More information on our Discord!"
-      },
-      {
-        "date": "2025-01-21",
-        "location": "CS-404",
-        "title": "Cloud Security / Pentesting",
-        "description": "Scott Piper, an expert in cloud security will be presenting on how he exploits cloud vulnerabilities! (Which is just someone else's computer)."
-      },
-      {
-        "date": "2025-02-01",
-        "title": "RMCCDC Qualifiers",
-        "location": "CS-404",
-        "description": "Our team will be competiting in National Collegiate Cyber Defense Competition Qualifiers. Send good vibes!"
-      },
-      {
-        "date": "2025-02-05",
-        "location": "CS-404",
-        "title": "Arctic Wolf Presentation",
-        "description": "Arctic Wolf will be coming to meet with us. More information to follow!"
-      },
-      {
-        "date": "2025-02-11",
-        "location": "CS-404",
-        "title": "Red Canary Cloud Architecture & Security",
-        "description": "We will have the priveladge of hearing from Dave Bogle, Principal Threat Researcher. Do you like cloud?"
-      },
-      {
-        "date": "2024-11-21",
-        "location": "CS-404",
-        "title": "CYSCUVU Service Project",
-        "description": "CYSCUVU has the oppurtunity to help out one of our local elementary schools unbox, cable manage & setup ~150 chromebooks."
-      },
-      {
-        "date": "2024-11-19",
-        "location": "CS-404",
-        "title": "Meeting with Clyde Co.",
-        "description": "We will be meeting with Sherrie Cowley, Head of Cybersecurity at Clyde Co.! Bring all of your questions!"
-      },
-      {
-        "date": "2024-10-29",
-        "location": "CS-404",
-        "title": "Competition Debrief",
-        "description": "We'll be having a quick debrief from the competing members of Lockdown & CCDC. Bring questions!"
-      },
-      {
-        "date": "2024-10-26",
-        "location": "CS-404",
-        "title": "UB Lockdown Competition",
-        "description": "Our team will compete in this upcoming Lockdown Competition, hosted by University at Buffalo. GO WOLVERINES! Update: We got 4th place!"
-      },
-      {
-        "date": "2024-10-26",
-        "location": "CS-404",
-        "title": "WRCCDC Invitational",
-        "description": "Our team will be competing in the first WRCCDC Invitational of the competition year! Competition details below! Update: (Results still to be announced)"
-      },
-      {
-        "date": "2024-10-16",
-        "location": "CS-404",
-        "title": "Hivestorm Competition",
-        "description": "Our team sets out to compete for 1st place in this upcoming Hivestorm competition. Competition details below."
-      },
-      {
-        "date": "2024-09-03",
-        "location": "CS-404",
-        "title": "Meeting with the NSA",
-        "description": "We'll hear from Cybersecurity/InfoSec industry experts from the NSA come talk to us about anything & how to work for the NSA. Possible Q&A at the end. Invite everyone you know!"
-      },
-      {
-        "date": "2024-08-27",
-        "location": "CS-404",
-        "title": "First Club Meeting of Fall 2024",
-        "description": "The first inaugural meeting for the Cybersecurity Club at UVU. We'll introduce the club, meet everyone, and vote for new leadership. Anyone is welcome to run for leadership!"
+        "date": "2025-08-26",
+        "location": "TBD",
+        "title": "First Meeting of Fall 2025!"
       }
     ]
   }
